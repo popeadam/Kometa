@@ -15,26 +15,26 @@ Supported Overlay Level: Movie, Show
 
 ## Supported Streaming Services
 
-| Streaming Service | Key           | Weight |
-| :---------------- | :------------ | :----- |
-| All 4             | `all4`        | `40`   |
-| AppleTV           | `appletv`     | `80`   |
-| BET+              | `bet`         | `20`   |
-| britbox           | `britbox`     | `30`   |
-| Crave             | `crave`       | `55`   |
-| Crunchyroll       | `Crunchyroll` | `120`  |
-| discovery+        | `discovery`   | `58`   |
-| Disney+           | `disney`      | `140`  |
-| hayu              | `hayu`        | `10`   |
-| Hulu              | `hulu`        | `100`  |
-| Max               | `max`         | `130`  |
-| Netflix           | `netflix`     | `160`  |
-| NOW               | `now`         | `50`   |
-| Paramount+        | `paramount`   | `90`   |
-| Peacock           | `peacock`     | `70`   |
-| Prime Video       | `amazon`      | `150`  |
-| Showtime          | `showtime`    | `60`   |
-| YouTube           | `youtube`     | `110`  |
+| Weight | Key           | Streaming Service |
+| :----- | :------------ | :---------------- |
+| `10`   | `hayu`        | hayu              |
+| `20`   | `bet`         | BET+              |
+| `30`   | `britbox`     | britbox           |
+| `40`   | `all4`        | All 4             |
+| `50`   | `now`         | NOW               |
+| `55`   | `crave`       | Crave             |
+| `58`   | `discovery`   | discovery+        |
+| `60`   | `showtime`    | Showtime          |
+| `70`   | `peacock`     | Peacock           |
+| `80`   | `appletv`     | AppleTV           |
+| `90`   | `paramount`   | Paramount+        |
+| `100`  | `hulu`        | Hulu              |
+| `110`  | `youtube`     | YouTube           |
+| `120`  | `Crunchyroll` | Crunchyroll       |
+| `130`  | `max`         | Max               |
+| `140`  | `disney`      | Disney+           |
+| `150`  | `amazon`      | Prime Video       |
+| `160`  | `netflix`     | Netflix           |
 
 
 ## Regional Variants

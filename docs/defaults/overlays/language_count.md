@@ -15,10 +15,10 @@ Supported Overlay Level: Movie, Show, Season, Episode
 
 ## Supported Audio/Subtitle Languages
 
-| Audio/Subtitle Languages | Key     | Weight |
-| :----------------------- | :------ | :----- |
-| Dual                     | `dual`  | `20`   |
-| Multi                    | `multi` | `10`   |
+| Weight | Key     | Audio/Subtitle Languages |
+| :----- | :------ | :----------------------- |
+| `10`   | `multi` | Multi                    |
+| `20`   | `dual`  | Dual                     |
 
 ## Config
 

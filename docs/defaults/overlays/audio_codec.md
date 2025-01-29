@@ -17,24 +17,25 @@ Recommendations: Designed for [TRaSH Guides](https://trash-guides.info/) filenam
 
 ## Supported Audio Codecs
 
-| Audio Codec            | Key            | Weight |
-| :--------------------- | :------------- | :----- |
-| AAC                    | `aac`          | `30`   |
-| Dolby Atmos            | `dolby_atmos`  | `130`  |
-| Dolby Digital          | `digital`      | `40`   |
-| Dolby Digital+         | `plus`         | `70`   |
-| Dolby Digital+ / E-AC3 | `plus_atmos`   | `140`  |
-| Dolby TrueHD           | `truehd`       | `120`  |
-| Dolby TrueHD Atmos     | `truehd_atmos` | `160`  |
-| DTS                    | `dts`          | `50`   |
-| DTS-ES                 | `dtses`        | `60`   |
-| DTS-HD-HRA             | `hra`          | `80`   |
-| DTS-HD-MA              | `ma`           | `110`  |
-| DTS-X                  | `dtsx`         | `150`  |
-| FLAC                   | `flac`         | `100`  |
-| MP3                    | `mp3`          | `20`   |
-| Opus                   | `opus`         | `10`   |
-| PCM                    | `pcm`          | `90`   |
+| Weight | Key            | Audio Codec            |
+| :----- | :------------- | :--------------------- |
+| `10`   | `opus`         | Opus                   |
+| `20`   | `mp3`          | MP3                    |
+| `30`   | `aac`          | AAC                    |
+| `40`   | `digital`      | Dolby Digital          |
+| `50`   | `dts`          | DTS                    |
+| `60`   | `dtses`        | DTS-ES                 |
+| `70`   | `plus`         | Dolby Digital+         |
+| `80`   | `hra`          | DTS-HD-HRA             |
+| `90`   | `pcm`          | PCM                    |
+| `100`  | `flac`         | FLAC                   |
+| `110`  | `ma`           | DTS-HD-MA              |
+| `120`  | `truehd`       | Dolby TrueHD           |
+| `130`  | `dolby_atmos`  | Dolby Atmos            |
+| `140`  | `plus_atmos`   | Dolby Digital+ / E-AC3 |
+| `150`  | `dtsx`         | DTS-X                  |
+| `160`  | `truehd_atmos` | Dolby TrueHD Atmos     |
+
 
 ### Standard Style
 

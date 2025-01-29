@@ -17,12 +17,12 @@ Supported Overlay Level: Show
 
 ## Supported Status
 
-| Status    | Key         | Weight |
-| :-------- | :---------- | :----- |
-| AIRING    | `airing`    | `40`   |
-| CANCELED  | `canceled`  | `20`   |
-| ENDED     | `ended`     | `10`   |
-| RETURNING | `returning` | `30`   |
+| Weight | Key         | Status    |
+| :----- | :---------- | :-------- |
+| `40`   | `airing`    | AIRING    |
+| `20`   | `canceled`  | CANCELED  |
+| `10`   | `ended`     | ENDED     |
+| `30`   | `returning` | RETURNING |
 
 ## Config
 

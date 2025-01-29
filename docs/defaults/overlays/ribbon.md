@@ -15,28 +15,28 @@ Supported Overlay Level: Movie, Show
 
 ## Supported Ribbon
 
-| Ribbon                          | Key               | Weight |
-| :------------------------------ | :---------------- | :----- |
-| BAFTA Winner                    | `bafta`           | `150`  |
-| Berlinale Winner                | `berlinale`       | `130`  |
-| Cannes Winner                   | `cannes`          | `140`  |
-| César Winner                    | `cesar`           | `70`   |
-| Common Sense Selection          | `common`          | `20`   |
-| Critic's Choice Winner          | `choice`          | `90`   |
-| Emmys Winner                    | `emmys`           | `100`  |
-| Golden Globe Director           | `golden_director` | `160`  |
-| Golden Globe Winner             | `golden`          | `170`  |
-| IMDb Top 250                    | `imdb`            | `60`   |
-| Independent Spirit Award Winner | `spirit`          | `80`   |
-| Letterboxd Top 250              | `letterboxd`      | `50`   |
-| Metacritic Must See             | `metacritic`      | `30`   |
-| Oscars Best Director            | `oscars_director` | `180`  |
-| Oscars Best Picture             | `oscars`          | `190`  |
-| Razzies Winner                  | `razzie`          | `10`   |
-| Rotten Tomatoes Certified Fresh | `rotten`          | `40`   |
-| Rotten Tomatoes Verified Hot    | `rottenverified`  | `45`   |
-| Sundance Winner                 | `sundance`        | `110`  |
-| Venice Winner                   | `venice`          | `120`  |
+| Weight | Key               | Ribbon                          |
+| :----- | :---------------- | :------------------------------ |
+| `150`  | `bafta`           | BAFTA Winner                    |
+| `130`  | `berlinale`       | Berlinale Winner                |
+| `140`  | `cannes`          | Cannes Winner                   |
+| `70`   | `cesar`           | César Winner                    |
+| `20`   | `common`          | Common Sense Selection          |
+| `90`   | `choice`          | Critic's Choice Winner          |
+| `100`  | `emmys`           | Emmys Winner                    |
+| `160`  | `golden_director` | Golden Globe Director           |
+| `170`  | `golden`          | Golden Globe Winner             |
+| `60`   | `imdb`            | IMDb Top 250                    |
+| `80`   | `spirit`          | Independent Spirit Award Winner |
+| `50`   | `letterboxd`      | Letterboxd Top 250              |
+| `30`   | `metacritic`      | Metacritic Must See             |
+| `180`  | `oscars_director` | Oscars Best Director            |
+| `190`  | `oscars`          | Oscars Best Picture             |
+| `10`   | `razzie`          | Razzies Winner                  |
+| `40`   | `rotten`          | Rotten Tomatoes Certified Fresh |
+| `45`   | `rottenverified`  | Rotten Tomatoes Verified Hot    |
+| `110`  | `sundance`        | Sundance Winner                 |
+| `120`  | `venice`          | Venice Winner                   |
 
 ## Config
 

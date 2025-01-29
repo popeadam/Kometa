@@ -17,16 +17,16 @@ Recommendations: Designed for [TRaSH Guides](https://trash-guides.info/) filenam
 
 ## Supported Video Formats
 
-| Video Format | Key        | Weight |
-| :----------- | :--------- | :----- |
-| BLU-RAY      | `bluray`   | `50`   |
-| CAM          | `cam`      | `8`    |
-| DVD          | `dvd`      | `20`   |
-| HDTV         | `hdtv`     | `30`   |
-| REMUX        | `remux`    | `60`   |
-| SDTV         | `sdtv`     | `10`   |
-| TELESYNC     | `telesync` | `9`    |
-| WEB          | `web`      | `40`   |
+| Weight | Key        | Video Format |
+| :----- | :--------- | :----------- |
+| `8`    | `cam`      | CAM          |
+| `9`    | `telesync` | TELESYNC     |
+| `10`   | `sdtv`     | SDTV         |
+| `20`   | `dvd`      | DVD          |
+| `30`   | `hdtv`     | HDTV         |
+| `40`   | `web`      | WEB          |
+| `50`   | `bluray`   | BLU-RAY      |
+| `60`   | `remux`    | REMUX        |
 
 ## Config
 
