@@ -20,70 +20,70 @@ the [TRaSH Guides](https://trash-guides.info/) filename naming scheme
 
 | Weight | Key               | Resolution      |
 | :----- | :---------------- | :-------------- |
-| `100`  | `1080p`           | 1080P           |
-| `120`  | `1080p_dv`        | 1080P DV        |
-| `128`  | `1080p_dvhdr`     | 1080P DV/HDR    |
-| `129`  | `1080p_dvhdrplus` | 1080p DV/HDR10+ |
-| `110`  | `1080p_hdr`       | 1080P HDR       |
-| `125`  | `1080p_plus`      | 1080P HDR10+    |
-| `10`   | `480p`            | 480P            |
-| `30`   | `480p_dv`         | 480P DV         |
-| `38`   | `480p_dvhdr`      | 480P DV/HDR     |
-| `39`   | `480p_dvhdrplus`  | 480P DV/HDR10+  |
-| `20`   | `480p_hdr`        | 480P HDR        |
-| `35`   | `480p_plus`       | 480P HDR10+     |
-| `130`  | `4k`              | 4K              |
-| `150`  | `4k_dv`           | 4K DV           |
-| `158`  | `4k_dvhdr`        | 4K DV/HDR       |
-| `159`  | `4k_dvhdrplus`    | 4K DV/HDR10+    |
-| `140`  | `4k_hdr`          | 4K HDR          |
-| `155`  | `4k_plus`         | 4K HDR10+       |
-| `40`   | `576p`            | 576P            |
-| `60`   | `576p_dv`         | 576P DV         |
-| `68`   | `576p_dvhdr`      | 576P DV/HDR     |
-| `69`   | `576p_dvhdrplus`  | 576P DV/HDR10+  |
-| `50`   | `576p_hdr`        | 576P HDR        |
-| `65`   | `576p_plus`       | 576P HDR10+     |
-| `70`   | `720p`            | 720P            |
-| `90`   | `720p_dv`         | 720P DV         |
-| `98`   | `720p_dvhdr`      | 720P DV/HDR     |
-| `99`   | `720p_dvhdrplus`  | 720P DV/HDR10+  |
-| `80`   | `720p_hdr`        | 720P HDR        |
-| `95`   | `720p_plus`       | 720P HDR10+     |
+| `1`    | `hdr`             | HDR             |
 | `5`    | `dv`              | DV              |
+| `7`    | `plus`            | HDR10+          |
 | `8`    | `dvhdr`           | DV/HDR          |
 | `9`    | `dvhdrplus`       | DV/HDR10+       |
-| `1`    | `hdr`             | HDR             |
-| `7`    | `plus`            | HDR10+          |
+| `10`   | `480p`            | 480P            |
+| `20`   | `480p_hdr`        | 480P HDR        |
+| `30`   | `480p_dv`         | 480P DV         |
+| `35`   | `480p_plus`       | 480P HDR10+     |
+| `38`   | `480p_dvhdr`      | 480P DV/HDR     |
+| `39`   | `480p_dvhdrplus`  | 480P DV/HDR10+  |
+| `40`   | `576p`            | 576P            |
+| `50`   | `576p_hdr`        | 576P HDR        |
+| `60`   | `576p_dv`         | 576P DV         |
+| `65`   | `576p_plus`       | 576P HDR10+     |
+| `68`   | `576p_dvhdr`      | 576P DV/HDR     |
+| `69`   | `576p_dvhdrplus`  | 576P DV/HDR10+  |
+| `70`   | `720p`            | 720P            |
+| `80`   | `720p_hdr`        | 720P HDR        |
+| `90`   | `720p_dv`         | 720P DV         |
+| `95`   | `720p_plus`       | 720P HDR10+     |
+| `98`   | `720p_dvhdr`      | 720P DV/HDR     |
+| `99`   | `720p_dvhdrplus`  | 720P DV/HDR10+  |
+| `100`  | `1080p`           | 1080P           |
+| `110`  | `1080p_hdr`       | 1080P HDR       |
+| `120`  | `1080p_dv`        | 1080P DV        |
+| `125`  | `1080p_plus`      | 1080P HDR10+    |
+| `128`  | `1080p_dvhdr`     | 1080P DV/HDR    |
+| `129`  | `1080p_dvhdrplus` | 1080p DV/HDR10+ |
+| `130`  | `4k`              | 4K              |
+| `140`  | `4k_hdr`          | 4K HDR          |
+| `150`  | `4k_dv`           | 4K DV           |
+| `155`  | `4k_plus`         | 4K HDR10+       |
+| `158`  | `4k_dvhdr`        | 4K DV/HDR       |
+| `159`  | `4k_dvhdrplus`    | 4K DV/HDR10+    |
 
 ## Supported Editions
 
 | Weight | Key             | Edition             |
 | :----- | :-------------- | :------------------ |
-| `60`   | `alternate`     | Alternate Cut       |
-| `150`  | `anniversary`   | Anniversary Edition |
-| `8`    | `blackchrome`   | Black and Chrome    |
-| `50`   | `coda`          | Coda Cut            |
-| `140`  | `collector`     | Collector's Edition |
-| `10`   | `criterion`     | Criterion           |
+| `5`    | `ulysses`       | Ulysses             |
+| `6`    | `openmatte`     | Open Matte          |
 | `7`    | `definitive`    | Definitive          |
-| `130`  | `diamond`       | Diamond Edition     |
-| `110`  | `directors`     | Director's Cut      |
-| `190`  | `extended`      | Extended Edition    |
-| `100`  | `final`         | Final Cut           |
+| `8`    | `blackchrome`   | Black and Chrome    |
+| `9`    | `richarddonner` | Richard Donner      |
+| `10`   | `criterion`     | Criterion           |
+| `20`   | `remastered`    | Remastered          |
 | `30`   | `imax`          | IMAX                |
 | `40`   | `enhanced`      | IMAX Enhanced       |
-| `90`   | `international` | International Cut   |
-| `6`    | `openmatte`     | Open Matte          |
-| `120`  | `platinum`      | Platinum Edition    |
-| `20`   | `remastered`    | Remastered          |
-| `9`    | `richarddonner` | Richard Donner      |
-| `160`  | `special`       | Special Edition     |
-| `80`   | `theatrical`    | Theatrical Cut      |
+| `50`   | `coda`          | Coda Cut            |
+| `60`   | `alternate`     | Alternate Cut       |
 | `70`   | `ultimate`      | Ultimate Cut        |
-| `5`    | `ulysses`       | Ulysses             |
-| `180`  | `uncut`         | Uncut Edition       |
+| `80`   | `theatrical`    | Theatrical Cut      |
+| `90`   | `international` | International Cut   |
+| `100`  | `final`         | Final Cut           |
+| `110`  | `directors`     | Director's Cut      |
+| `120`  | `platinum`      | Platinum Edition    |
+| `130`  | `diamond`       | Diamond Edition     |
+| `140`  | `collector`     | Collector's Edition |
+| `150`  | `anniversary`   | Anniversary Edition |
+| `160`  | `special`       | Special Edition     |
 | `170`  | `unrated`       | Unrated Edition     |
+| `180`  | `uncut`         | Uncut Edition       |
+| `190`  | `extended`      | Extended Edition    |
 
 ## "Dovetail" versions
 

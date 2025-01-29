@@ -19,10 +19,10 @@ Supported Overlay Level: Show
 
 | Weight | Key         | Status    |
 | :----- | :---------- | :-------- |
-| `40`   | `airing`    | AIRING    |
-| `20`   | `canceled`  | CANCELED  |
 | `10`   | `ended`     | ENDED     |
+| `20`   | `canceled`  | CANCELED  |
 | `30`   | `returning` | RETURNING |
+| `40`   | `airing`    | AIRING    |
 
 ## Config
 

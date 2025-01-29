@@ -17,26 +17,26 @@ Supported Overlay Level: Movie, Show
 
 | Weight | Key               | Ribbon                          |
 | :----- | :---------------- | :------------------------------ |
-| `150`  | `bafta`           | BAFTA Winner                    |
-| `130`  | `berlinale`       | Berlinale Winner                |
-| `140`  | `cannes`          | Cannes Winner                   |
-| `70`   | `cesar`           | César Winner                    |
-| `20`   | `common`          | Common Sense Selection          |
-| `90`   | `choice`          | Critic's Choice Winner          |
-| `100`  | `emmys`           | Emmys Winner                    |
-| `160`  | `golden_director` | Golden Globe Director           |
-| `170`  | `golden`          | Golden Globe Winner             |
-| `60`   | `imdb`            | IMDb Top 250                    |
-| `80`   | `spirit`          | Independent Spirit Award Winner |
-| `50`   | `letterboxd`      | Letterboxd Top 250              |
-| `30`   | `metacritic`      | Metacritic Must See             |
-| `180`  | `oscars_director` | Oscars Best Director            |
-| `190`  | `oscars`          | Oscars Best Picture             |
 | `10`   | `razzie`          | Razzies Winner                  |
+| `20`   | `common`          | Common Sense Selection          |
+| `30`   | `metacritic`      | Metacritic Must See             |
 | `40`   | `rotten`          | Rotten Tomatoes Certified Fresh |
 | `45`   | `rottenverified`  | Rotten Tomatoes Verified Hot    |
+| `50`   | `letterboxd`      | Letterboxd Top 250              |
+| `60`   | `imdb`            | IMDb Top 250                    |
+| `70`   | `cesar`           | César Winner                    |
+| `80`   | `spirit`          | Independent Spirit Award Winner |
+| `90`   | `choice`          | Critic's Choice Winner          |
+| `100`  | `emmys`           | Emmys Winner                    |
 | `110`  | `sundance`        | Sundance Winner                 |
 | `120`  | `venice`          | Venice Winner                   |
+| `130`  | `berlinale`       | Berlinale Winner                |
+| `140`  | `cannes`          | Cannes Winner                   |
+| `150`  | `bafta`           | BAFTA Winner                    |
+| `160`  | `golden_director` | Golden Globe Director           |
+| `170`  | `golden`          | Golden Globe Winner             |
+| `180`  | `oscars_director` | Oscars Best Director            |
+| `190`  | `oscars`          | Oscars Best Picture             |
 
 ## Config
 
