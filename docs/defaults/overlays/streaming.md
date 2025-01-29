@@ -71,44 +71,7 @@ make your own local copy.
 Note that the `template_variables:` section only needs to be used if you do want to actually change how the defaults 
 work. Any value not specified will use its default value if it has one if not it's just ignored.
 
-??? abstract "Variable Lists (click to expand)"
-
-    * **File-Specific Template Variables** are variables available specifically for this Kometa Defaults File.
-
-    * **Overlay Template Variables** are additional variables shared across the Kometa Overlay Defaults.
-
-    ??? example "Default Template Variable Values (click to expand)"
-
-        | Variable            | Default                                                                        |
-        |:--------------------|:-------------------------------------------------------------------------------|
-        | `horizontal_offset` | **Description:** Change the horizontal offset.<br>**Default Value:** `15`      |
-        | `horizontal_align`  | **Description:** Change the horizontal alignment.<br>**Default Value:** `left` |
-        | `vertical_offset`   | **Description:** Change the vertical offset.<br>**Default Value:** `390`       |
-        | `vertical_align`    | **Description:** Change the vertical alignment.<br>**Default Value:** `bottom` |
-        | `back_color`        | **Description:** Change the back color.<br>**Default Value:** `#00000099`      |
-        | `back_radius`       | **Description:** Change the back (lozenge) radius .<br>**Default Value:** `30` |
-        | `back_width`        | **Description:** Change the back (lozenge) width.<br>**Default Value:** `305`  |
-        | `back_height`       | **Description:** Change the back (lozenge) height.<br>**Default Value:** `105` |
-        
-    === "File-Specific Template Variables"
-
-        | Variable                     | Description & Values                                                                                                                                                                                                                                                                                                                                                                                                                          |
-        | :--------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-        | `discover_with_<<key>>`      | **Description:** Overrides the TMDb Watch Provider used for the specfied key. This is only needed if a specific `region` has a different ID for the watch provider.<br>**Default:** `<<discover_with>>`<br>**Values:** Any TMDb Watch Provider ID for [Movies](https://developer.themoviedb.org/reference/watch-providers-movie-list) / [Shows](https://developer.themoviedb.org/reference/watch-provider-tv-list) based on the user's region |
-        | `originals_only`             | **Description:** Changes Streaming Service overlays to only apply to original content produced by the service.<br>**Note**: Cannot be used with `region`, and only produces overlays for `amazon`, `appletv`, `disney`, `max`, `hulu`, `netflix`, `paramount`, `peacock`<br>**Default:** `false`<br>**Values:** `true`, `false`                                                                                                               |
-        | `region`                     | **Description:** Changes some Streaming Service lists to regional variants (see below table for more information.<br>**Default:** `US`<br>**Values:** Any [ISO 3166-1 Code](https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes) of the region where the streaming information should be based on.                                                                                                                                         |
-        | `weight_<<key>>`<sup>1</sup> | **Description:** Controls the weight of the Overlay. Higher numbers have priority.<br>**Values:** Any Number                                                                                                                                                                                                                                                                                                                                  |
-
-        1. Each default overlay has a `key` that when calling to effect a specific overlay you must replace `<<key>>` 
-        with when calling.
-
-    === "Overlay Template Variables"
-
-        {%
-           include-markdown "../overlay_variables.md"
-        %}
-
-???+ example "Example Template Variable Amendments"
+??? example "Example Template Variable Amendments"
 
     The below is an example config.yml extract with some Template Variables added in to change how the file works.
     
@@ -122,3 +85,39 @@ work. Any value not specified will use its default value if it has one if not it
               use_peacock: false
               weight_netflix: 100
     ```
+
+* **File-Specific Template Variables** are variables available specifically for this Kometa Defaults File.
+
+* **Overlay Template Variables** are additional variables shared across the Kometa Overlay Defaults.
+
+??? example "Default Template Variable Values (click to expand)"
+
+    | Variable            | Default                                                                        |
+    |:--------------------|:-------------------------------------------------------------------------------|
+    | `horizontal_offset` | **Description:** Change the horizontal offset.<br>**Default Value:** `15`      |
+    | `horizontal_align`  | **Description:** Change the horizontal alignment.<br>**Default Value:** `left` |
+    | `vertical_offset`   | **Description:** Change the vertical offset.<br>**Default Value:** `390`       |
+    | `vertical_align`    | **Description:** Change the vertical alignment.<br>**Default Value:** `bottom` |
+    | `back_color`        | **Description:** Change the back color.<br>**Default Value:** `#00000099`      |
+    | `back_radius`       | **Description:** Change the back (lozenge) radius .<br>**Default Value:** `30` |
+    | `back_width`        | **Description:** Change the back (lozenge) width.<br>**Default Value:** `305`  |
+    | `back_height`       | **Description:** Change the back (lozenge) height.<br>**Default Value:** `105` |
+    
+=== "File-Specific Template Variables"
+
+    | Variable                     | Description & Values                                                                                                                                                                                                                                                                                                                                                                                                                          |
+    | :--------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+    | `discover_with_<<key>>`      | **Description:** Overrides the TMDb Watch Provider used for the specfied key. This is only needed if a specific `region` has a different ID for the watch provider.<br>**Default:** `<<discover_with>>`<br>**Values:** Any TMDb Watch Provider ID for [Movies](https://developer.themoviedb.org/reference/watch-providers-movie-list) / [Shows](https://developer.themoviedb.org/reference/watch-provider-tv-list) based on the user's region |
+    | `originals_only`             | **Description:** Changes Streaming Service overlays to only apply to original content produced by the service.<br>**Note**: Cannot be used with `region`, and only produces overlays for `amazon`, `appletv`, `disney`, `max`, `hulu`, `netflix`, `paramount`, `peacock`<br>**Default:** `false`<br>**Values:** `true`, `false`                                                                                                               |
+    | `region`                     | **Description:** Changes some Streaming Service lists to regional variants (see below table for more information.<br>**Default:** `US`<br>**Values:** Any [ISO 3166-1 Code](https://en.wikipedia.org/wiki/ISO_3166-1#Current_codes) of the region where the streaming information should be based on.                                                                                                                                         |
+    | `weight_<<key>>`<sup>1</sup> | **Description:** Controls the weight of the Overlay. Higher numbers have priority.<br>**Values:** Any Number                                                                                                                                                                                                                                                                                                                                  |
+
+    1. Each default overlay has a `key` that when calling to effect a specific overlay you must replace `<<key>>` 
+    with when calling.
+
+=== "Overlay Template Variables"
+
+    {%
+        include-markdown "../overlay_variables.md"
+    %}
+

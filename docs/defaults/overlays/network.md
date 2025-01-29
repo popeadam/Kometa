@@ -44,38 +44,7 @@ make your own local copy.
 Note that the `template_variables:` section only needs to be used if you do want to actually change how the defaults 
 work. Any value not specified will use its default value if it has one if not it's just ignored.
 
-??? abstract "Variable Lists (click to expand)"
-
-    * **File-Specific Template Variables** are variables available specifically for this Kometa Defaults File.
-
-    * **Overlay Template Variables** are additional variables shared across the Kometa Overlay Defaults.
-
-    ??? example "Default Template Variable Values (click to expand)"
-
-        | Variable            | Default     |
-        |:--------------------|:------------|
-        | `horizontal_offset` | `15`        |
-        | `horizontal_align`  | `left`      |
-        | `vertical_offset`   | `510`       |
-        | `vertical_align`    | `bottom`    |
-        | `back_color`        | `#00000099` |
-        | `back_radius`       | `30`        |
-        | `back_width`        | `305`       |
-        | `back_height`       | `105`       |
-        
-    === "File-Specific Template Variables"
-
-        | Variable | Description & Values                                                                                              |
-        |:---------|:------------------------------------------------------------------------------------------------------------------|
-        | `style`  | **Description:** Choose between the default color version or the **white** one.<br>**Values:** `color` or `white` |
-
-    === "Overlay Template Variables"
-
-        {%
-           include-markdown "../overlay_variables.md"
-        %}
-    
-???+ example "Example Template Variable Amendments"
+??? example "Example Template Variable Amendments"
 
     The below is an example config.yml extract with some Template Variables added in to change how the file works.
     
@@ -96,3 +65,33 @@ work. Any value not specified will use its default value if it has one if not it
               vertical_offset: 390
               builder_level: episode
     ```
+
+* **File-Specific Template Variables** are variables available specifically for this Kometa Defaults File.
+
+* **Overlay Template Variables** are additional variables shared across the Kometa Overlay Defaults.
+
+??? example "Default Template Variable Values (click to expand)"
+
+    | Variable            | Default     |
+    |:--------------------|:------------|
+    | `horizontal_offset` | `15`        |
+    | `horizontal_align`  | `left`      |
+    | `vertical_offset`   | `510`       |
+    | `vertical_align`    | `bottom`    |
+    | `back_color`        | `#00000099` |
+    | `back_radius`       | `30`        |
+    | `back_width`        | `305`       |
+    | `back_height`       | `105`       |
+    
+=== "File-Specific Template Variables"
+
+    | Variable | Description & Values                                                                                              |
+    |:---------|:------------------------------------------------------------------------------------------------------------------|
+    | `style`  | **Description:** Choose between the default color version or the **white** one.<br>**Values:** `color` or `white` |
+
+=== "Overlay Template Variables"
+
+    {%
+        include-markdown "../overlay_variables.md"
+    %}
+

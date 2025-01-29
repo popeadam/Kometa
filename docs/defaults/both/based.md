@@ -45,45 +45,7 @@ make your own local copy.
 Note that the `template_variables:` section only needs to be used if you do want to actually change how the defaults 
 work. Any value not specified will use its default value if it has one if not it's just ignored.
 
-??? abstract "Variable Lists (click to expand)"
-
-    * **File-Specific Template Variables** are variables available specifically for this Kometa Defaults File.
-
-    * **Shared Template Variables** are additional variables shared across the Kometa Defaults.
-
-    * **Shared Separator Variables** are additional variables available since this Default contains a 
-    [Separator](../separators.md).
-
-    === "File-Specific Template Variables"
-
-        | Variable                        | Description & Values                                                                                                                                                                                                                                                                                          |
-        | :------------------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-        | `exclude`                       | **Description:** Exclude these Media Outlets from creating a Dynamic Collection.<br>**Values:** List of Media Outlet Keys                                                                                                                                                                                     |
-        | `limit_<<key>>`<sup>1</sup>     | **Description:** Changes the Builder Limit of the [key's](#collection_section) collection.<br>**Default:** `limit`<br>**Values:** Number Greater than 0                                                                                                                                                       |
-        | `limit`                         | **Description:** Changes the Builder Limit for all collections in a Defaults File.<br>**Values:** Number Greater than 0                                                                                                                                                                                       |
-        | `name_format`                   | **Description:** Changes the title format of the Dynamic Collections.<br>**Default:** `Based on a <<key_name>>`<br>**Values:** Any string with `<<key_name>>` in it.                                                                                                                                          |
-        | `sort_by_<<key>>`<sup>1</sup>   | **Description:** Changes the Smart Filter Sort of the [key's](#collection_section) collection.<br>**Default:** `sort_by`<br>**Values:** [Any `smart_filter` Sort Option](../../files/builders/plex.md#sort-options)                                                                                           |
-        | `sort_by`                       | **Description:** Changes the Smart Filter Sort for all collections in a Defaults File.<br>**Default:** `release.desc`<br>**Values:** [Any `smart_filter` Sort Option](../../files/builders/plex.md#sort-options)                                                                                              |
-        | `summary_format`                | **Description:** Changes the summary format of the Dynamic Collections.<br>**Default:** `<<library_translationU>>s based on or inspired by <<translated_key_name>>s.`<br>**Values:** Any string.                                                                                                              |
-        | `sync_mode_<<key>>`<sup>1</sup> | **Description:** Changes the Sync Mode of the [key's](#collection_section) collection.<br>**Default:** `sync_mode`<br>**Values:**<table class="clearTable"><tr><td>`sync`</td><td>Add and Remove Items based on Builders</td></tr><tr><td>`append`</td><td>Only Add Items based on Builders</td></tr></table> |
-        | `sync_mode`                     | **Description:** Changes the Sync Mode for all collections in a Defaults File.<br>**Default:** `sync`<br>**Values:**<table class="clearTable"><tr><td>`sync`</td><td>Add and Remove Items based on Builders</td></tr><tr><td>`append`</td><td>Only Add Items based on Builders</td></tr></table>              |
-
-        1. Each default collection has a [`key`](#collection_section) that you must replace `<<key>>` with when using 
-        this Template Variable. These keys are found in the table at the top of this page.
-    
-    === "Shared Template Variables"
-
-        {%
-          include-markdown "../collection_variables.md"
-        %}
-    
-    === "Shared Separator Variables"
-
-        {%
-          include-markdown "../separator_variables.md"
-        %}
-
-???+ example "Example Template Variable Amendments"
+??? example "Example Template Variable Amendments"
 
     The below is an example config.yml extract with some Template Variables added in to change how the file works.
 
@@ -110,3 +72,40 @@ work. Any value not specified will use its default value if it has one if not it
     4.  Pin the "Based on a Video Game" collection to the Recommended tab of the library
     5.  Pin the "Based on a Video Game" collection to the home screen of the server owner
     6.  Pin the "Based on a Video Game" collection to the home screen of other users of the server
+
+* **File-Specific Template Variables** are variables available specifically for this Kometa Defaults File.
+
+* **Shared Template Variables** are additional variables shared across the Kometa Defaults.
+
+* **Shared Separator Variables** are additional variables available since this Default contains a 
+[Separator](../separators.md).
+
+=== "File-Specific Template Variables"
+
+    | Variable                        | Description & Values                                                                                                                                                                                                                                                                                          |
+    | :------------------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+    | `exclude`                       | **Description:** Exclude these Media Outlets from creating a Dynamic Collection.<br>**Values:** List of Media Outlet Keys                                                                                                                                                                                     |
+    | `limit_<<key>>`<sup>1</sup>     | **Description:** Changes the Builder Limit of the [key's](#collection_section) collection.<br>**Default:** `limit`<br>**Values:** Number Greater than 0                                                                                                                                                       |
+    | `limit`                         | **Description:** Changes the Builder Limit for all collections in a Defaults File.<br>**Values:** Number Greater than 0                                                                                                                                                                                       |
+    | `name_format`                   | **Description:** Changes the title format of the Dynamic Collections.<br>**Default:** `Based on a <<key_name>>`<br>**Values:** Any string with `<<key_name>>` in it.                                                                                                                                          |
+    | `sort_by_<<key>>`<sup>1</sup>   | **Description:** Changes the Smart Filter Sort of the [key's](#collection_section) collection.<br>**Default:** `sort_by`<br>**Values:** [Any `smart_filter` Sort Option](../../files/builders/plex.md#sort-options)                                                                                           |
+    | `sort_by`                       | **Description:** Changes the Smart Filter Sort for all collections in a Defaults File.<br>**Default:** `release.desc`<br>**Values:** [Any `smart_filter` Sort Option](../../files/builders/plex.md#sort-options)                                                                                              |
+    | `summary_format`                | **Description:** Changes the summary format of the Dynamic Collections.<br>**Default:** `<<library_translationU>>s based on or inspired by <<translated_key_name>>s.`<br>**Values:** Any string.                                                                                                              |
+    | `sync_mode_<<key>>`<sup>1</sup> | **Description:** Changes the Sync Mode of the [key's](#collection_section) collection.<br>**Default:** `sync_mode`<br>**Values:**<table class="clearTable"><tr><td>`sync`</td><td>Add and Remove Items based on Builders</td></tr><tr><td>`append`</td><td>Only Add Items based on Builders</td></tr></table> |
+    | `sync_mode`                     | **Description:** Changes the Sync Mode for all collections in a Defaults File.<br>**Default:** `sync`<br>**Values:**<table class="clearTable"><tr><td>`sync`</td><td>Add and Remove Items based on Builders</td></tr><tr><td>`append`</td><td>Only Add Items based on Builders</td></tr></table>              |
+
+    1. Each default collection has a [`key`](#collection_section) that you must replace `<<key>>` with when using 
+    this Template Variable. These keys are found in the table at the top of this page.
+
+=== "Shared Template Variables"
+
+    {%
+      include-markdown "../collection_variables.md"
+    %}
+
+=== "Shared Separator Variables"
+
+    {%
+      include-markdown "../separator_variables.md"
+    %}
+

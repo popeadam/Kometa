@@ -69,44 +69,7 @@ make your own local copy.
 Note that the `template_variables:` section only needs to be used if you do want to actually change how the defaults 
 work. Any value not specified will use its default value if it has one if not it's just ignored.
 
-??? abstract "Variable Lists (click to expand)"
-
-    * **File-Specific Template Variables** are variables available specifically for this Kometa Defaults File.
-
-    * **Overlay Template Variables** are additional variables shared across the Kometa Overlay Defaults.
-
-    ??? example "Default Template Variable Values (click to expand)"
-
-        | Variable            | Default     |
-        |:--------------------|:------------|
-        | `horizontal_offset` | `15`        |
-        | `horizontal_align`  | `left`      |
-        | `vertical_offset`   | `270`       |
-        | `vertical_align`    | `bottom`    |
-        | `back_color`        | `#00000099` |
-        | `back_radius`       | `30`        |
-        | `back_width`        | `305`       |
-        | `back_height`       | `105`       |
-
-    === "File-Specific Template Variables"
-
-        | Variable         | Description & Values                                                                                                                        |
-        | :--------------- | :------------------------------------------------------------------------------------------------------------------------------------------ |
-        | `addon_offset`   | **Description:** Text Addon Image Offset from the text.<br>**Default:** `15`<br>**Values:** Any number greater than 0                       |
-        | `addon_position` | **Description:** Text Addon Image Alignment in relation to the text.<br>**Default:** `left`<br>**Values:** `left`, `right`, `top`, `bottom` |
-        | `builder_level`  | **Description:** Choose the Overlay Level.<br>**Values:** `season` or `episode`                                                             |
-        | `post_nr_text`   | **Description:** Choose the text after the `nr` key for the Overlay.<br>**Values:** Any String                                              |
-        | `post_text`      | **Description:** Choose the text after the key for the Overlay.<br>**Default:** `+`<br>**Values:** Any String                               |
-        | `pre_nr_text`    | **Description:** Choose the text before the `nr` key for the Overlay.<br>**Values:** Any String                                             |
-        | `pre_text`       | **Description:** Choose the text before the key for the Overlay.<br>**Values:** Any String                                                  |
-
-    === "Overlay Template Variables"
-
-        {%
-           include-markdown "../overlay_variables.md"
-        %}
-    
-???+ example "Example Template Variable Amendments"
+??? example "Example Template Variable Amendments"
 
     The below is an example config.yml extract with some Template Variables added in to change how the file works.
     
@@ -118,3 +81,39 @@ work. Any value not specified will use its default value if it has one if not it
             template_variables:
               pre_text: "CS"
     ```
+
+* **File-Specific Template Variables** are variables available specifically for this Kometa Defaults File.
+
+* **Overlay Template Variables** are additional variables shared across the Kometa Overlay Defaults.
+
+??? example "Default Template Variable Values (click to expand)"
+
+    | Variable            | Default     |
+    |:--------------------|:------------|
+    | `horizontal_offset` | `15`        |
+    | `horizontal_align`  | `left`      |
+    | `vertical_offset`   | `270`       |
+    | `vertical_align`    | `bottom`    |
+    | `back_color`        | `#00000099` |
+    | `back_radius`       | `30`        |
+    | `back_width`        | `305`       |
+    | `back_height`       | `105`       |
+
+=== "File-Specific Template Variables"
+
+    | Variable         | Description & Values                                                                                                                        |
+    | :--------------- | :------------------------------------------------------------------------------------------------------------------------------------------ |
+    | `addon_offset`   | **Description:** Text Addon Image Offset from the text.<br>**Default:** `15`<br>**Values:** Any number greater than 0                       |
+    | `addon_position` | **Description:** Text Addon Image Alignment in relation to the text.<br>**Default:** `left`<br>**Values:** `left`, `right`, `top`, `bottom` |
+    | `builder_level`  | **Description:** Choose the Overlay Level.<br>**Values:** `season` or `episode`                                                             |
+    | `post_nr_text`   | **Description:** Choose the text after the `nr` key for the Overlay.<br>**Values:** Any String                                              |
+    | `post_text`      | **Description:** Choose the text after the key for the Overlay.<br>**Default:** `+`<br>**Values:** Any String                               |
+    | `pre_nr_text`    | **Description:** Choose the text before the `nr` key for the Overlay.<br>**Values:** Any String                                             |
+    | `pre_text`       | **Description:** Choose the text before the key for the Overlay.<br>**Values:** Any String                                                  |
+
+=== "Overlay Template Variables"
+
+    {%
+        include-markdown "../overlay_variables.md"
+    %}
+

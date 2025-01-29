@@ -132,44 +132,7 @@ make your own local copy.
 Note that the `template_variables:` section only needs to be used if you do want to actually change how the defaults 
 work. Any value not specified will use its default value if it has one if not it's just ignored.
 
-??? abstract "Variable Lists (click to expand)"
-
-    * **File-Specific Template Variables** are variables available specifically for this Kometa Defaults File.
-
-    * **Overlay Template Variables** are additional variables shared across the Kometa Overlay Defaults.
-
-    ??? example "Default Template Variable Values (click to expand)"
-
-        | Variable            | Default     |
-        |:--------------------|:------------|
-        | `horizontal_offset` | `15`        |
-        | `horizontal_align`  | `left`      |
-        | `vertical_offset`   | `15`        |
-        | `vertical_align`    | `top`       |
-        | `back_color`        | `#00000099` |
-        | `back_radius`       | `30`        |
-        | `back_width`        | `305`       |
-        | `back_height`       | `105`/`189` |
-        
-    === "File-Specific Template Variables"
-
-        | Variable                     | Description & Values                                                                                                                           |
-        | :--------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------- |
-        | `builder_level`              | **Description:** Choose the Overlay Level.<br>**Values:** `season` or `episode`                                                                |
-        | `use_edition`                | **Description:** Turns off all Edition Overlays in the Defaults File.<br>**Values:** `false` to turn off the overlays                          |
-        | `use_resolution`             | **Description:** Turns off all Resolution Overlays in the Defaults File.<br>**Values:** `false` to turn off the overlays                       |
-        | `weight_<<key>>`<sup>1</sup> | **Description:** Controls the weight of the Overlay. Higher numbers have priority. **Only works with Edition keys.**<br>**Values:** Any Number |
-
-        1. Each default overlay has a `key` that when calling to effect a specific overlay you must replace `<<key>>` 
-        with when calling.
-
-    === "Overlay Template Variables"
-
-        {%
-           include-markdown "../overlay_variables.md"
-        %}
-    
-???+ example "Example Template Variable Amendments"
+??? example "Example Template Variable Amendments"
 
     The below is an example config.yml extract with some Template Variables added in to change how the file works.
     
@@ -189,3 +152,39 @@ work. Any value not specified will use its default value if it has one if not it
               use_1080p_hdr: false
               use_1080p_dv: false
     ```
+
+* **File-Specific Template Variables** are variables available specifically for this Kometa Defaults File.
+
+* **Overlay Template Variables** are additional variables shared across the Kometa Overlay Defaults.
+
+??? example "Default Template Variable Values (click to expand)"
+
+    | Variable            | Default     |
+    |:--------------------|:------------|
+    | `horizontal_offset` | `15`        |
+    | `horizontal_align`  | `left`      |
+    | `vertical_offset`   | `15`        |
+    | `vertical_align`    | `top`       |
+    | `back_color`        | `#00000099` |
+    | `back_radius`       | `30`        |
+    | `back_width`        | `305`       |
+    | `back_height`       | `105`/`189` |
+    
+=== "File-Specific Template Variables"
+
+    | Variable                     | Description & Values                                                                                                                           |
+    | :--------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------- |
+    | `builder_level`              | **Description:** Choose the Overlay Level.<br>**Values:** `season` or `episode`                                                                |
+    | `use_edition`                | **Description:** Turns off all Edition Overlays in the Defaults File.<br>**Values:** `false` to turn off the overlays                          |
+    | `use_resolution`             | **Description:** Turns off all Resolution Overlays in the Defaults File.<br>**Values:** `false` to turn off the overlays                       |
+    | `weight_<<key>>`<sup>1</sup> | **Description:** Controls the weight of the Overlay. Higher numbers have priority. **Only works with Edition keys.**<br>**Values:** Any Number |
+
+    1. Each default overlay has a `key` that when calling to effect a specific overlay you must replace `<<key>>` 
+    with when calling.
+
+=== "Overlay Template Variables"
+
+    {%
+        include-markdown "../overlay_variables.md"
+    %}
+

@@ -40,18 +40,7 @@ make your own local copy.
 Note that the `template_variables:` section only needs to be used if you do want to actually change how the defaults 
 work. Any value not specified will use its default value if it has one if not it's just ignored.
 
-??? abstract "Variable Lists (click to expand)"
-
-    * **Shared Separator Variables** are additional variables available since this Default contains a 
-    [Separator](../separators.md).
-
-    === "Shared Separator Variables"
-
-        {%
-          include-markdown "../separator_variables.md"
-        %}
-
-???+ example "Example Template Variable Amendments"
+??? example "Example Template Variable Amendments"
 
     The below is an example config.yml extract with some Template Variables added in to change how the file works.
 
@@ -67,3 +56,14 @@ work. Any value not specified will use its default value if it has one if not it
     ```
 
     1.  Use the purple [Separator Style](../separators.md#separator-styles)
+
+* **Shared Separator Variables** are additional variables available since this Default contains a 
+[Separator](../separators.md).
+
+=== "Shared Separator Variables"
+
+    {%
+      include-markdown "../separator_variables.md"
+    %}
+
+
