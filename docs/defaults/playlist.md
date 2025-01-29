@@ -51,7 +51,7 @@ work. Any value not specified will use its default value if it has one if not it
 
     [Shared Collection Variables](collection_variables.md) are NOT available to this Defaults File.
 
-??? example "Example Template Variable Amendments"
+??? example "Example Template Variable Amendments (Click to Expand)"
 
     The below is an example config.yml extract with some Template Variables added in to change how the file works.
 
