@@ -20,7 +20,7 @@ Rating.
 ## Supported Content Rating DE
 
 | Rating | Key    |
-| :----- | :----- |
+|:-------|:-------|
 | 0      | `0`    |
 | 12     | `12`   |
 | 16     | `16`   |
@@ -95,7 +95,7 @@ work. Any value not specified will use its default value if it has one if not it
     | `back_radius`    | **Description:** Choose the back radius for the overlay lozenge.<br>**Default:**`30`                                                        |
     | `back_width`     | **Description:** Choose the back width for the overlay lozenge.<br>**Default:**`305`                                                        |
     | `builder_level`  | **Description:** Choose the Overlay Level.<br>**Values:** `season` or `episode`                                                             |
-    | `color`          | **Description:** Color version of the content rating images<br>**Default:**`` Set to `false` if you want b&w version.                       |
+    | `color`          | **Description:** Color version of the content rating images<br>**Default:**` Set to `false` if you want b&w version.                        |
 
 === "Overlay Template Variables"
 

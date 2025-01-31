@@ -20,7 +20,7 @@ Rating.
 ## Supported Content Rating US
 
 | Rating | Key     |
-| :----- | :------ |
+|:-------|:--------|
 | NR     | `nr`    |
 | TV-14  | `tv-14` |
 | TV-G   | `tv-g`  |
@@ -98,7 +98,7 @@ work. Any value not specified will use its default value if it has one if not it
     | `back_height`    | **Description:** Choose the back height for the overlay lozenge.<br>**Default:**`105`                                                       |
     | `back_radius`    | **Description:** Choose the back radius for the overlay lozenge.<br>**Default:**`30`                                                        |
     | `back_width`     | **Description:** Choose the back width for the overlay lozenge.<br>**Default:**`305`                                                        |
-    | `color`          | **Description:** Color version of the content rating images<br>**Default:**`` Set to `false` if you want b&w version.                       |
+    | `color`          | **Description:** Color version of the content rating images<br>**Default:**` Set to `false` if you want b&w version.                       |
 
 === "Overlay Template Variables"
 
