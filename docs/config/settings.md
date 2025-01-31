@@ -130,6 +130,14 @@ The available setting attributes which can be set at each level are outlined bel
     <div id="cache" />Allow Kometa to create and maintain a local cache database for faster subsequent processing. The 
     cache file is created in the same directory as the configuration file.
 
+    ???+ danger "Critical Warning"
+
+         We **strongly** advise you leave this setting to `true`
+
+         If you set this to `false`, any Overlays set against your libraries will be reapplied on each and every run. Kometa stores information on which Overlays it has applied in the cache file.
+
+         You will suffer from [image bloat](../kometa/scripts/imagemaid.md) and your Kometa runs will be longer than needed if you do not use a cache file.
+
     <hr style="margin: 0px;">
     
     **Attribute:** `cache`

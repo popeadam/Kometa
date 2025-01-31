@@ -77,22 +77,13 @@ These are high-level steps which assume the user has knowledge of Docker, and th
 docker run -it -v <PATH_TO_CONFIG>:/config:rw kometateam/kometa
 ```
 
+- The `-it` flag allows you to interact with the script when needed (such as for Trakt or MyAnimeList authentication).
+- The `-v <PATH_TO_CONFIG>:/config:rw` flag mounts the location you choose as a persistent volume to store your files.
+- this command will run the container in the foreground, waiting until 5AM to run; if you want it to run right now or run at a different time, or run in the background, you will need to add some flags to the command. 
 
-`-it`
-
-:   Allows you to interact with the script when needed (such as for Trakt or MyAnimeList authentication).
-
-`-v <PATH_TO_CONFIG>:/config:rw`
-
-:   Mounts the location you choose as a persistent volume to store your files.
-
-This command will run the container in the foreground, waiting until 5AM to run; if you want it to run right now or run at a different time, or run in the background, you will need to add some flags to the command. 
-
-  * Change `<PATH_TO_CONFIG>` to a folder where your `config.yml` and other files are [the assumption here is that they already exist].
-
-  * The docker image defaults to running the configuration file named `config.yml` which resides in your persistent volume.
-
-  * If your directory has spaces (such as "My Documents"), place quotation marks around your directory pathing as shown here: `-v "<PATH_TO_CONFIG>:/config:rw"`
+    * Change `<PATH_TO_CONFIG>` to a folder where your `config.yml` and other files are [the assumption here is that they already exist].
+    * The docker image defaults to running the configuration file named `config.yml` which resides in your persistent volume.
+    * If your directory has spaces (such as "My Documents"), place quotation marks around your directory pathing as shown here: `-v "<PATH_TO_CONFIG>:/config:rw"`
 
 
 #### Example Docker Run commands:
@@ -111,7 +102,7 @@ docker run -it -d -v "X:\Media\Kometa\config:/config:rw" kometateam/kometa
 ```
 
 
-```shell title="Run in the background and wait until 3PM to wake up"
+```shell title="Run in the background and wait until 5PM to wake up"
 docker run -it -d -v "X:\Media\Kometa\config:/config:rw" kometateam/kometa --times 17:00
 ```
 
@@ -127,15 +118,14 @@ docker run -it --rm -v "X:\Media\Kometa\config:/config:rw" kometateam/kometa --r
 
 ### Docker Compose:
 
-This is an example docker-compose which will have to be edited to suit your environment before use, but illustrates the minimal contents:
+This is an example `docker-compose.yml` file that provides a minimal setup for running Kometa. You will need to edit it to suit your environment before use (see the volume mapping).
+
+Any additional customizations, such as setting your local timezone or other Environment Variables can be added manually.
 
 ```yaml
 services:
   kometa:
-    image: kometateam/kometa
     container_name: kometa
-    environment:
-      - TZ=TIMEZONE #optional
     volumes:
       - /path/to/config:/config
     restart: unless-stopped
