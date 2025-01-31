@@ -125,7 +125,6 @@ Any additional customizations, such as setting your local timezone or other Envi
 ```yaml
 services:
   kometa:
-    container_name: kometa
     volumes:
       - /path/to/config:/config
     restart: unless-stopped
