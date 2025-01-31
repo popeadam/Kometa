@@ -2,26 +2,26 @@
 
 This article will walk you through getting Kometa set up and running.  It will cover:
 
-1. Retrieving the Kometa code
-2. Installing requirements
-3. Setting up the initial config file
-4. Creating some sample collections using the defaults
-5. Setting up a Collection File and creating a sample collection.
-6. Adding some default overlays.
+1.  Retrieving the Kometa code
+2.  Installing requirements
+3.  Setting up the initial config file
+4.  Creating some sample collections using the defaults
+5.  Setting up a Collection File and creating a sample collection.
+6.  Adding some default overlays.
 
 The specific steps you will be taking:
 
-1. Verify that the version of Python installed is between 3.9 and 3.13.
-2. Verify that the Git tools are installed and install them if not
-3. Use `git` to retrieve the code
-4. Install requirements [extra bits of code required for Kometa]
-5. Gather two things that the script requires:
-   - TMDb API Key
-   - Plex URL and Token
+1.  Verify that the version of Python installed is between 3.9 and 3.13.
+2.  Verify that the Git tools are installed and install them if not
+3.  Use `git` to retrieve the code
+4.  Install requirements [extra bits of code required for Kometa]
+5.  Gather two things that the script requires:
+    1.  TMDb API Key
+    2.  Plex URL and Token
 
 6. Then, iteratively:
-   - use `python` to run the script
-   - use a text editor to modify a couple of text files until you have a working config file and a single working Collection File.
+    1.  Use `python` to run the script
+    2.  Use a text editor to modify a couple of text files until you have a working config file and a single working Collection File.
 
 Note that running a Python script is inherently a pretty technical process.  If you are unable or unwilling to learn the rudiments of using tools like python and git, you should probably strongly consider running Kometa in [Docker](docker.md).  That will eliminate the Python and git installs from this process and make it as simple as it can be.
 
@@ -39,7 +39,7 @@ something like this
 
 That’s a command you’re going to type or paste into your terminal (OSX or Linux) or Powershell (Windows).  In some cases it's displaying *output* from a command you've typed, but the difference should be apparent in context.
 
-???+ warning ""
+???+ warning
 
     This walkthrough is going to be pretty pedantic.  I’m assuming you’re reading it because you have no idea how to get a Python script going, so I’m proceeding from the assumption that you want to be walked through every little detail.   You’re going to deliberately cause errors and then fix them as you go through it.  This is to help you understand what exactly is going on behind the scenes so that when you see these sorts of problems in the wild you will have some background to understand what’s happening.  If I only give you the happy path, then when you make a typo later on you’ll have no idea where that typo might be or why it’s breaking things.
 
@@ -83,9 +83,9 @@ Since most of this is typing commands into a terminal, you'll need to have a ter
 
 In order to run a Python script. the first thing you'll need is a Python interpreter.  This is typically already present on Linux and Mac, but will probably have to be installed on Windows.
 
-First let's check if it's installed already [type this into your terminal]:
+Let's check if Python is already installed [type this into your terminal]
 
-``` { .shell }
+```shell
 python3 --version
 ```
 
@@ -101,10 +101,9 @@ If this doesn't return a version between `3.9` and `3.13`, you'll need to instal
 
 === ":fontawesome-brands-windows: Windows"
 
+    Before installing Python, try again without the `3` [type this into your terminal]
 
-    Before installing Python, try again without the `3`:
-
-    ```
+    ```shell
     python --version
     ```
     Depending on the version of Python, you may need to use one or the other.  If this works, you're ready to go, just substitute `python` for `python3` in the couple places it appears below.
@@ -122,9 +121,9 @@ If this doesn't return a version between `3.9` and `3.13`, you'll need to instal
 
 To copy the Kometa code to your machine, we'll be using git.  This may be installed on Mac or Linux, and probably isn't in Windows.
 
-First let's check if it's installed already [type this into your terminal]:
+Let's check if Git is already installed [type this into your terminal]
 
-``` { .shell }
+```shell
 git --version
 ```
 
@@ -153,17 +152,19 @@ If this doesn't return a version number, you'll need to get git installed.
 
 ### Retrieving the Kometa code
 
-Now we're going to use `git` to make a copy of the code on your local computer.
+Now we're going to use `git` to make a copy of the code on your local computer in the home directory [type this into your terminal]
 
-Clone the repo into your home directory and go into that directory [type this into your terminal]:
-
-``` { .shell }
+```shell
 cd ~
 git clone https://github.com/Kometa-Team/Kometa
 cd Kometa
 ```
 
-Now `git checkout` to the branch reflecting the version of the wiki you are reading, as some functionality may be dependent on this.  If you are reading the latest version of the wiki, no `git checkout` is required.
+Now `git checkout` to the branch reflecting the version of the wiki you are reading, as some functionality may be dependent on this.  **If you are reading the latest version of the wiki, no `git checkout` is required.**
+
+=== ":fontawesome-brands-github: latest"
+
+    If you are reading the latest version of the wiki, no `git checkout` is required.
 
 === ":fontawesome-brands-github: develop"
 
@@ -173,13 +174,17 @@ Now `git checkout` to the branch reflecting the version of the wiki you are read
 
         git checkout nightly
 
-**NOTE: The rest of this walkthrough assumes you are staying in this directory in this terminal/Powershell window.**
+???+ tip "Important Information"
 
-**IMPORTANT: In the future, when you want to run Kometa at the command line, you have to be in this directory.**
+    The rest of this walkthrough assumes you are staying in this directory in this terminal/Powershell window.
+
+    **In the future, when you want to run Kometa at the command line, you have to be in this directory.**
+
+#### Navigating to the Kometa Code
 
 When you open a command window to run Kometa, the first step will always be:
 
-``` { .shell }
+```shell
 cd ~
 cd Kometa
 ```
@@ -189,7 +194,7 @@ There are parts of the code that are assuming and expecting that you will be in 
 <details>
   <summary>What did that do?</summary>
 
-  ``` { .shell }
+  ```shell
   cd ~
   ```
   This changes to your home directory, which will be something like `/home/yourname` or `/Users/yourname` or `C:\Users\YourName` depending on the platform.

@@ -56,23 +56,32 @@ playlist_files:
 
 You will ultimately need an entry here for each of the libraries on which you want Kometa to act.  Those top-level elements [Movies, TV Shows, Anime, Music] are names of libraries on your Plex server.
 
-For now, delete the “TV Shows”, “Anime”, and "Music" sections from the config file and change the name of the “Movies” section to “Movies-NOSUCHLIBRARY":
+For now, follow these steps:
+
+- Delete the "TV Shows", "Anime" and "Music" sections from the config file
+- Delete the "remove_overlays" line
+- Delete the "overlay_files" section
+- Delete the "playlist_files" section
+- Rename "Movies" to "Movies-NOSUCHLIBRARY"
 
 The top bit of your config file should now look like this:
 
 ```yaml
 libraries:
-  Movies-NOSUCHLIBRARY:                         ## <<< CHANGE THIS LINE
+  Movies-NOSUCHLIBRARY:                        # Each library must match the Plex library name
     collection_files:
       - default: basic               # This is a file within the defaults folder in the Repository
       - default: imdb                # This is a file within the defaults folder in the Repository
       # see the wiki for how to use local files, folders, URLs, or files from git
-playlist_files:
-  - default: playlist                # This is a file within Kometa's defaults folder
-  # see the wiki for how to use local files, folders, URLs, or files from git
 ```
+
+???+ warning
+
+    If the top bit of your config file does not look like this, make the necessary adjustments. 
+
+    You should not have any `overlay_files` or `playlist_files` at this stage, if you do then remove them.
 
 This is intended to cause an error for illustration that you will then fix.
 
-Be very careful with the indentation and ensure it looks exactly like the above; each line indented using two spaces, NOT TABS, with `playlist_files:` all the way over on the left.  Indentation is significant in YAML.
+**Be very careful with the indentation and ensure it looks exactly like the above; each line indented using two spaces, NOT TABS, indentation is significant in YAML.**
 

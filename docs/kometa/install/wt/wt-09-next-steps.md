@@ -12,7 +12,7 @@ If you want to remove those collections, open the config file, remove or comment
 
 ```yaml
 libraries:
-  All The Movies:
+  test_movie_lib:
     collection_files:
       # - default: basic               # This is a file within the defaults folder in the Repository
       # - default: imdb                # This is a file within the defaults folder in the Repository

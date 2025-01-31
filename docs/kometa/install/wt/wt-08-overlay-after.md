@@ -6,7 +6,7 @@ Eventually, you'll see it start applying overlays to all your movies:
 
 ```
 |=========================================================|
-|    Applying Overlays for the All The Movies Library     |
+|    Applying Overlays for the test_movie_lib Library     |
 |=========================================================|
 |                                                         |
 | 10 Cloverfield Lane         | Overlays Applied: 4K-HDR  |

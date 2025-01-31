@@ -1,26 +1,21 @@
-Kometa provides an extensive collection of "default" collection files.
+Kometa provides an extensive collection of "default" collection, overlay and playlist files.
 
-These files provide a simple way for you to create collections based on franchises or awards or actors, etc.
+These files provide a simple way for you to create collections/overlays/playlists based on franchises or awards or actors, etc.
 
-The default config links to two of them, these two lines in your config file:
+The config we are working on links to two Defaults Collection Files, these lines in your config file:
 
 ```yaml
 libraries:
-  THE_NAME_OF_YOUR_MOVIE_LIBRARY:
+  test_movie_lib:
     collection_files:
-      - default: basic               # <<< THIS LINE
-      - default: imdb                # <<< THIS LINE
-playlist_files:
-  - default: playlist
+      - default: basic               # <<< DEFAULTS COLLECTION FILE
+      - default: imdb                # <<< DEFAULTS COLLECTION FILE
 ```
 
-The first will create:
+Collections that will be created include:
 
   - Newly Released
   - New Episodes [TV libraries only]
-
-The second will create:
-
   - IMDb Popular
   - IMDb Top 250
   - IMDb Lowest Rated

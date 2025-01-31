@@ -50,7 +50,7 @@ Open the config file again and add the last line shown below:
 
 ```yaml
 libraries:
-  All The Movies:
+  test_movie_lib:
     collection_files:
       - default: basic
       - default: imdb
