@@ -55,7 +55,6 @@ git clone https://github.com/Kometa-Team/Kometa
 ```shell
 pip install -r requirements.txt
 ```
-
 3. If the above command fails, run the following command:
 
 ```shell
@@ -78,46 +77,51 @@ These are high-level steps which assume the user has knowledge of Docker, and th
 docker run -it -v <PATH_TO_CONFIG>:/config:rw kometateam/kometa
 ```
 
-- The `-it` flag allows you to interact with the script when needed (such as for Trakt or MyAnimeList authentication).
-- The `-v <PATH_TO_CONFIG>:/config:rw` flag mounts the location you choose as a persistent volume to store your files.
-- this command will run the container in the foreground, waiting until 5AM to run; if you want it to run right now or run at a different time, or run in the background, you will need to add some flags to the command. 
 
-    * Change `<PATH_TO_CONFIG>` to a folder where your `config.yml` and other files are [the assumption here is that they already exist].
-    * The docker image defaults to running the configuration file named `config.yml` which resides in your persistent volume.
-    * If your directory has spaces (such as "My Documents"), place quotation marks around your directory pathing as shown here: `-v "<PATH_TO_CONFIG>:/config:rw"`
+`-it`
+
+:   Allows you to interact with the script when needed (such as for Trakt or MyAnimeList authentication).
+
+`-v <PATH_TO_CONFIG>:/config:rw`
+
+:   Mounts the location you choose as a persistent volume to store your files.
+
+This command will run the container in the foreground, waiting until 5AM to run; if you want it to run right now or run at a different time, or run in the background, you will need to add some flags to the command. 
+
+  * Change `<PATH_TO_CONFIG>` to a folder where your `config.yml` and other files are [the assumption here is that they already exist].
+
+  * The docker image defaults to running the configuration file named `config.yml` which resides in your persistent volume.
+
+  * If your directory has spaces (such as "My Documents"), place quotation marks around your directory pathing as shown here: `-v "<PATH_TO_CONFIG>:/config:rw"`
 
 
 #### Example Docker Run commands:
 
 These docs are assuming you have a basic understanding of Docker concepts.  One place to get familiar with Docker would be the [official tutorial](https://www.docker.com/101-tutorial/).
 
-Run in the foreground and wait until 5AM to wake up: 
 
-```shell
+
+```shell title="Run in the foreground and wait until 5AM to wake up"
 docker run -it -v "X:\Media\Kometa\config:/config:rw" kometateam/kometa
 ```
 
-Run in the background and wait until 5AM to wake up: 
 
-```shell
+```shell title="Run in the background and wait until 5AM to wake up"
 docker run -it -d -v "X:\Media\Kometa\config:/config:rw" kometateam/kometa
 ```
 
-Run in the background and wait until 3PM to wake up: 
 
-```shell
+```shell title="Run in the background and wait until 3PM to wake up"
 docker run -it -d -v "X:\Media\Kometa\config:/config:rw" kometateam/kometa --times 17:00
 ```
 
-Run immediately in the foreground, then exit when done: 
 
-```shell
+```shell title="Run immediately in the foreground, then exit when done"
 docker run -it -v "X:\Media\Kometa\config:/config:rw" kometateam/kometa --run
 ```
 
-Run immediately in the foreground, exit when done, delete the container when done: 
 
-```shell
+```shell title="Run immediately in the foreground, exit when done, delete the container when done"
 docker run -it --rm -v "X:\Media\Kometa\config:/config:rw" kometateam/kometa --run
 ```
 
@@ -151,26 +155,25 @@ This example docker-compose would create a container that runs immediately upon 
 
 As with the one above, this is an example docker-compose which will have to be edited to suit your environment before use.
 
+Press the :fontawesome-solid-circle-plus: icon to learn more
+
 ```yaml
 services:
   kometa:
     image: kometateam/kometa
     container_name: kometa
     environment:
-      - KOMETA_RUN=true
-      - KOMETA_CONFIG=/config/special-config.yml
-      - KOMETA_OVERLAYS_ONLY=true
-      - KOMETA_RUN_LIBRARIES=Movies
+      - KOMETA_RUN=true #(1)!
+      - KOMETA_CONFIG=/config/special-config.yml #(2)!
+      - KOMETA_OVERLAYS_ONLY=true #(3)!
+      - KOMETA_RUN_LIBRARIES=Movies #(4)!
     volumes:
       - /path/to/config:/config
 ```
 
-`- KOMETA_RUN=true` tells Kometa to run right away,
-
-`- KOMETA_CONFIG=/config/special-config.yml` points Kometa at a particular config file,
-
-`- KOMETA_OVERLAYS_ONLY=true` tells Kometa to run overlays only, and 
-
-`- KOMETA_RUN_LIBRARIES=Movies` tells Kometa to process only a library called "Movies"
+1.  Tells Kometa to run right away
+2.  Points Kometa at a particular config file
+3.  Tells Kometa to run overlays only
+4.  Tells Kometa to process only a library called "Movies"
 
 Again, a list of the available environment variables can be found [here](../environmental.md).

@@ -54,16 +54,18 @@ table tr td code {
 }
 
 .highlight span.filename {
-    background-color: var(--md-code-bg-color);
+    background-color: #005741;
     border-bottom: .05rem solid #30363d;
-    border-top-left-radius: .1rem;
-    border-top-right-radius: .1rem;
+    border-radius: .3rem;
     display: inline;
     font-size: .85em;
     font-weight: 700;
     margin-top: 1em;
     padding: .6617647059em 1.1764705882em;
+    text-decoration-color: #ffffff;
 }
+
+
 [data-md-color-scheme="default"] .md-typeset h1, [data-md-color-scheme="slate"] .md-typeset h2, [data-md-color-scheme="slate"] .md-typeset h3, [data-md-color-scheme="slate"] .md-typeset h4 {
     color: #2f2f2f;
 }
@@ -158,9 +160,9 @@ table.clearTable th {
 table.clearTable, table.clearTable tbody, table.clearTable tr, table.clearTable td, table.clearTable th {
     background-color: transparent !important;
     border: 0 !important;
-    /* background-color: var(--md-default-bg-color); */
-    /* border: 0.05rem solid var(--md-typeset-table-color); */
-    /* border-radius: 0.1rem; */
+
+
+
 }
 table.dualTable td, table.dualTable th {
   padding-left: 15px !important;
@@ -195,7 +197,7 @@ table.dualTable td, table.dualTable th {
     padding: 9px;
 }
 
-/* light mode alternating table bg colors */
+
 .md-typeset__table tr:nth-child(2n) {
     background-color: #f8f8f8;
 }
@@ -213,7 +215,6 @@ table.dualTable td, table.dualTable th {
 .md-typeset table:not([class]) th {
     min-width: 0rem;
 }
-/* dark mode alternating table bg colors */
 [data-md-color-scheme="slate"] .md-typeset__table tr:nth-child(2n) {
     background-color: #1d1d1d;
 }
@@ -383,7 +384,6 @@ table.dualTable td, table.dualTable th {
     right: 0;
 }
 
-/* Custom tooltips */
 .md-tooltip {
     border-radius: 6px;
 }
@@ -475,11 +475,11 @@ details[class="quicklink annotate"] > p .md-annotation span span::before {
 }
 
 .md-tabs__item a {
-  color: #000; /* Default color for text */
+  color: #000;
 }
 
 .md-tabs__item a:hover {
-  color: #dfdfdf; /* Slightly darker color on hover */
+  color: #dfdfdf;
 }
 
 .md-tabs__item:not(.md-tabs__item--active) a {
@@ -506,21 +506,31 @@ details[class="quicklink annotate"] > p .md-annotation span span::before {
 .md-typeset .tabbed-set > input:nth-child(7):checked ~ .tabbed-labels > :nth-child(7),
 .md-typeset .tabbed-set > input:nth-child(8):checked ~ .tabbed-labels > :nth-child(8),
 .md-typeset .tabbed-set > input:nth-child(9):checked ~ .tabbed-labels > :nth-child(9) {
-    color: #ffffff; /* White text */
-    background-color: #00bc8c; /* Green background */
+    color: #ffffff; 
+    background-color: #00bc8c; 
     border-color: 0 -.05rem #30363d #30363d #fff inset;
-    text-decoration: underline; /* Adds the underline */
-    text-decoration-thickness: 1.5px; /* Makes the underline thicker */
-    text-underline-offset: 4px; /* Moves the underline away from the text */
-    text-decoration-color: #ffffff; /* Optional: Set the underline color */
-    border-radius: 6px 6px 0 0; /* Rounded top corners only */
-    font-weight: bold; /* Emphasized text */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+    text-decoration: underline; 
+    text-decoration-thickness: 2px; 
+    text-underline-offset: 4px; 
+    text-decoration-color: #ffffff; 
+    border-radius: 6px 6px 0 0; 
+    font-weight: bold; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+}
+.md-typeset .tabbed-labels > label {
+    color: #ffffff; 
+    background-color: #2f2f2f; 
+    border-color: 0 -.05rem #30363d #30363d #fff inset;
+    text-decoration: underline; 
+    text-decoration-thickness: 1px; 
+    text-underline-offset: 4px; 
+    text-decoration-color: #ffffff; 
+    border-radius: 6px 6px 0 0; 
+    font-weight: bold; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
+    margin-right: 5px; 
 }
 
-.md-typeset .tabbed-labels>label {
-    border-bottom: 0rem
-}
 
 .js .md-typeset .tabbed-labels:before {
     height: 0px;
@@ -528,7 +538,7 @@ details[class="quicklink annotate"] > p .md-annotation span span::before {
 
 .md-typeset .tabbed-content {
     width: 100%;
-    border: 1px solid var(--md-default-fg-color--lightest); /* Adds a border with the specified variable color */
+    border: 1px solid var(--md-default-fg-color--lightest); 
     border-radius: 0 0 6px 6px;
     padding: 10px;
     box-sizing: border-box;
