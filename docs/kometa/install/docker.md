@@ -242,19 +242,19 @@ You'll need to add this to the docker command every time you run it, like this:
 === ":fontawesome-brands-linux: Linux"
 
       ``` { .shell .no-copy }
-      docker run --rm -it -v "/home/YOURUSERNAME/kometa/config:/config:rw" kometateam/kometa
+      docker run --rm -it -v "/home/YOURUSERNAME/kometa/config:/config:rw" kometateam/kometa --run
       ```
 
 === ":fontawesome-brands-apple: macOS"
 
       ``` { .shell .no-copy }
-      docker run --rm -it -v "/Users/YOURUSERNAME/kometa/config:/config:rw" kometateam/kometa
+      docker run --rm -it -v "/Users/YOURUSERNAME/kometa/config:/config:rw" kometateam/kometa --run
       ```
 
 === ":fontawesome-brands-windows: Windows"
 
       ``` { .no-copy }
-      docker run --rm -it -v "C:\Users\YOURUSERNAME\kometa\config:/config:rw" kometateam/kometa
+      docker run --rm -it -v "C:\Users\YOURUSERNAME\kometa\config:/config:rw" kometateam/kometa --run
       ```
 
 If you run that command now you should see something like this:
