@@ -5,6 +5,6 @@ The `CODE_NAME` Default Collection File is used to create collections based on t
 ![](../images/CODE_NAME.png)
 
 {%
-    include-markdown "./../header.md"
+    include-markdown "./../defaults_1.md"
     replace='[["LIBRARY_TYPE", "LIBRARY_TYPE"], ["SECTION_NUMBER", "130"]]'
 %}

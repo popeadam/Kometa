@@ -7,49 +7,30 @@ hide:
 The `actor` Default Collection File is used to dynamically create collections based on the most popular actors/actresses 
 in your library.
 
-## Requirements & Recommendations
-
-Supported Library Types: Movie, Show
-
-## <a id="collection_section"></a>Collections Section 140
-
-| Collection                                      | Key                                             | Description                                                                    |
-|:------------------------------------------------|:------------------------------------------------|:-------------------------------------------------------------------------------|
+{%
+    include-markdown "./../defaults_1.md"
+    replace='[["LIBRARY_TYPE", "Movie, Show"], ["SECTION_NUMBER", "140"]]'
+%}
 | `<<actor_name>>`<br>**Example:** `Frank Welker` | `<<actor_name>>`<br>**Example:** `Frank Welker` | Collection of Movies/Shows the actor is top billing in.                        |
 | `Actors Collections`                            | `separator`                                     | [Separator Collection](../separators.md) to denote the Section of Collections. |
 
 {%
   include-markdown "../people.md"
 %}
-
-## Config
-
-The below YAML in your config.yml will create the collections:
-
-```yaml
-libraries:
-  Movies:
-    collection_files:
-      - default: actor
-  TV Shows:
-    collection_files:
-      - default: actor
-```
-
-## Template Variables
-
-Template Variables can be used to manipulate the file in various ways to slightly change how it works without having to 
-make your own local copy.
-
-Note that the `template_variables:` section only needs to be used if you do want to actually change how the defaults 
-work. Any value not specified will use its default value if it has one if not it's just ignored.
-
-??? example "Example Template Variable Amendments (Click to Expand)"
-
-    The below is an example config.yml extract with some Template Variables added in to change how the file works.
-
-    Click the :fontawesome-solid-circle-plus: icon to learn more
-
+{%
+    include-markdown "./../defaults_2.md"
+%}
+{%
+    include-markdown "./../movie_example.md"
+    replace='["CODE_NAME", "actor"]'
+%}
+{%
+    include-markdown "./../show_example.md"
+    replace='["CODE_NAME", "actor"]'
+%}
+{%
+    include-markdown "./../defaults_3.md"
+%}
     ```yaml
     libraries:
       Movies:
@@ -76,8 +57,7 @@ work. Any value not specified will use its default value if it has one if not it
 
 * **Shared Template Variables** are additional variables shared across the Kometa Defaults.
 
-* **Shared Separator Variables** are additional variables available since this Default contains a 
-[Separator](../separators.md).
+* **Shared Separator Variables** are additional variables available since this Default contains a [Separator](../separators.md).
 
 === "File-Specific Template Variables"
 
