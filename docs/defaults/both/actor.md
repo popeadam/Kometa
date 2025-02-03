@@ -14,7 +14,7 @@ Supported Library Types: Movie, Show
 ## <a id="collection_section"></a>Collections Section 140
 
 | Collection                                      | Key                                             | Description                                                                    |
-| :---------------------------------------------- | :---------------------------------------------- | :----------------------------------------------------------------------------- |
+|:------------------------------------------------|:------------------------------------------------|:-------------------------------------------------------------------------------|
 | `<<actor_name>>`<br>**Example:** `Frank Welker` | `<<actor_name>>`<br>**Example:** `Frank Welker` | Collection of Movies/Shows the actor is top billing in.                        |
 | `Actors Collections`                            | `separator`                                     | [Separator Collection](../separators.md) to denote the Section of Collections. |
 

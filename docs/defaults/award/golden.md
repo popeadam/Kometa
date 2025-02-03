@@ -23,14 +23,14 @@ with Movie Libraries.
     replace='[["FULL_NAME", "Golden Globes"], ["SHORT_NAME", "Golden Globe"]]'
 %}
 {%
-    include-markdown "./award_3_movie.md"
+    include-markdown "./../movie_example.md"
     replace='["CODE_NAME", "golden"]'
 %}
 {%
-    include-markdown "./award_3_show.md"
+    include-markdown "./../show_example.md"
     replace='["CODE_NAME", "golden"]'
 %}
 {%
-    include-markdown "./award_4.md"
+    include-markdown "./award_3.md"
     replace='[["SHORT_NAME", "Golden Globe"], ["CODE_NAME", "golden"]]'
 %}

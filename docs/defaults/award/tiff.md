@@ -12,10 +12,10 @@ hide:
     replace='[["FULL_NAME", "Toronto International Film Festival"], ["SHORT_NAME", "Toronto International Film Festival"]]'
 %}
 {%
-    include-markdown "./award_3_movie.md"
+    include-markdown "./../movie_example.md"
     replace='["CODE_NAME", "tiff"]'
 %}
 {%
-    include-markdown "./award_4.md"
+    include-markdown "./award_3.md"
     replace='[["SHORT_NAME", "Toronto International Film Festival"], ["CODE_NAME", "tiff"]]'
 %}

@@ -12,14 +12,14 @@ hide:
     replace='[["FULL_NAME", "People\\'s Choice"], ["SHORT_NAME", "People\\'s Choice"]]'
 %}
 {%
-    include-markdown "./award_3_movie.md"
+    include-markdown "./../movie_example.md"
     replace='["CODE_NAME", "pca"]'
 %}
 {%
-    include-markdown "./award_3_show.md"
+    include-markdown "./../show_example.md"
     replace='["CODE_NAME", "pca"]'
 %}
 {%
-    include-markdown "./award_4.md"
+    include-markdown "./award_3.md"
     replace='[["SHORT_NAME", "People\\'s Choice"], ["CODE_NAME", "pca"]]'
 %}

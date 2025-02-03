@@ -1,7 +1,3 @@
----
-hide:
-  - toc
----
 {%
     include-markdown "./award_1.md"
     replace='[["FULL_NAME", "Academy Awards (Oscars)"], ["CODE_NAME", "oscars"], ["LIBRARY_TYPE", "Movie"]]'
@@ -13,10 +9,10 @@ hide:
     replace='[["FULL_NAME", "Academy Awards (Oscars)"], ["SHORT_NAME", "Oscars"]]'
 %}
 {%
-    include-markdown "./award_3_movie.md"
+    include-markdown "./../movie_example.md"
     replace='["CODE_NAME", "oscars"]'
 %}
 {%
-    include-markdown "./award_4.md"
+    include-markdown "./award_3.md"
     replace='[["SHORT_NAME", "Oscars"], ["CODE_NAME", "oscars"]]'
 %}

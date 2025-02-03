@@ -12,10 +12,10 @@ hide:
     replace='[["FULL_NAME", "Cannes Film"], ["SHORT_NAME", "Cannes"]]'
 %}
 {%
-    include-markdown "./award_3_movie.md"
+    include-markdown "./../movie_example.md"
     replace='["CODE_NAME", "cannes"]'
 %}
 {%
-    include-markdown "./award_4.md"
+    include-markdown "./award_3.md"
     replace='[["SHORT_NAME", "Cannes"], ["CODE_NAME", "cannes"]]'
 %}

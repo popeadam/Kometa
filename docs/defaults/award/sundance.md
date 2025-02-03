@@ -12,10 +12,10 @@ hide:
     replace='[["FULL_NAME", "Sundance Film Festival"], ["SHORT_NAME", "Sundance Film Festival"]]'
 %}
 {%
-    include-markdown "./award_3_movie.md"
+    include-markdown "./../movie_example.md"
     replace='["CODE_NAME", "sundance"]'
 %}
 {%
-    include-markdown "./award_4.md"
+    include-markdown "./award_3.md"
     replace='[["SHORT_NAME", "Sundance Film Festival"], ["CODE_NAME", "sundance"]]'
 %}

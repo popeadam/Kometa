@@ -12,10 +12,10 @@ hide:
     replace='[["FULL_NAME", "National Film Registry"], ["SHORT_NAME", "National Film Registry"]]'
 %}
 {%
-    include-markdown "./award_3_movie.md"
+    include-markdown "./../movie_example.md"
     replace='["CODE_NAME", "nfr"]'
 %}
 {%
-    include-markdown "./award_4.md"
+    include-markdown "./award_3.md"
     replace='[["SHORT_NAME", "National Film Registry"], ["CODE_NAME", "nfr"]]'
 %}

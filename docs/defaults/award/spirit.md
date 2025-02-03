@@ -12,10 +12,10 @@ hide:
     replace='[["FULL_NAME", "Independent Spirit"], ["SHORT_NAME", "Independent Spirit"]]'
 %}
 {%
-    include-markdown "./award_3_movie.md"
+    include-markdown "./../movie_example.md"
     replace='["CODE_NAME", "spirit"]'
 %}
 {%
-    include-markdown "./award_4.md"
+    include-markdown "./award_3.md"
     replace='[["SHORT_NAME", "Independent Spirit"], ["CODE_NAME", "spirit"]]'
 %}

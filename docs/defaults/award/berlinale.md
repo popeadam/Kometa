@@ -12,10 +12,10 @@ hide:
     replace='[["FULL_NAME", "Berlin International Film Festival"], ["SHORT_NAME", "Berlinale"]]'
 %}
 {%
-    include-markdown "./award_3_movie.md"
+    include-markdown "./../movie_example.md"
     replace='["CODE_NAME", "berlinale"]'
 %}
 {%
-    include-markdown "./award_4.md"
+    include-markdown "./award_3.md"
     replace='[["SHORT_NAME", "Berlinale"], ["CODE_NAME", "berlinale"]]'
 %}

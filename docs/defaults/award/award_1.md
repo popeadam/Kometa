@@ -4,11 +4,7 @@ The `CODE_NAME` Default Collection File is used to create collections based on t
 
 ![](../images/CODE_NAME.png)
 
-## Requirements & Recommendations
-
-Supported Library Types: LIBRARY_TYPE
-<!--space-->
-## <a id="collection_section"></a>Collections Section 130
-
-| Collection                                             | Key                               | Description                                                                        |
-|:-------------------------------------------------------|:----------------------------------|:-----------------------------------------------------------------------------------|
+{%
+    include-markdown "./../header.md"
+    replace='[["LIBRARY_TYPE", "LIBRARY_TYPE"], ["SECTION_NUMBER", "130"]]'
+%}

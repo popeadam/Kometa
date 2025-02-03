@@ -12,10 +12,10 @@ hide:
     replace='[["FULL_NAME", "Screen Actors Guild"], ["SHORT_NAME", "Screen Actors Guild"]]'
 %}
 {%
-    include-markdown "./award_3_movie.md"
+    include-markdown "./../movie_example.md"
     replace='["CODE_NAME", "sag"]'
 %}
 {%
-    include-markdown "./award_4.md"
+    include-markdown "./award_3.md"
     replace='[["SHORT_NAME", "Screen Actors Guild"], ["CODE_NAME", "sag"]]'
 %}
