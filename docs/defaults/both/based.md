@@ -2,55 +2,23 @@
 hide:
   - toc
 ---
-# Based On... Collections
+{%
+    include-markdown "./../templates/defaults_header.md"
+    replace='{
+        "COLLECTION": "Based On...", 
+        "CODE_NAME": "based",
+        "LIBRARY_TYPE": "Movie, Show", 
+        "SECTION_NUMBER": "085", 
+        "DESCRIPTION": "create collections with items that are based on or inspired by various media outlets (such as Books or Video Games)."
+    }'
+%}
+{% include-markdown "./../templates/separator_line.md" replace='{"SEPARATOR": "Based on..."}' %}
+| `Based on a Book`       | `books`       | Collection of Movies/Shows based on or inspired by books        |
+| `Based on a Comic`      | `comics`      | Collection of Movies/Shows based on or inspired by comics       |
+| `Based on a True Story` | `true_story`  | Collection of Movies/Shows based on or inspired by true stories |
+| `Based on a Video Game` | `video_games` | Collection of Movies/Shows based on or inspired by video games  |
 
-The `based` Default Collection File is used to create collections with items that are based on or inspired by various 
-media outlets (such as Books or Video Games).
-
-![](../images/based.png)
-
-## Requirements & Recommendations
-
-Supported Library Types: Movie, Show
-
-## <a id="collection_section"></a>Collections Section 085
-
-| Collection                | Key           | Description                                                                    |
-| :------------------------ | :------------ | :----------------------------------------------------------------------------- |
-| `Based on a Book`         | `books`       | Collection of Movies/Shows based on or inspired by books                       |
-| `Based on a Comic`        | `comics`      | Collection of Movies/Shows based on or inspired by comics                      |
-| `Based on a True Story`   | `true_story`  | Collection of Movies/Shows based on or inspired by true stories                |
-| `Based on a Video Game`   | `video_games` | Collection of Movies/Shows based on or inspired by video games                 |
-| `Based on... Collections` | `separator`   | [Separator Collection](../separators.md) to denote the Section of Collections. |
-
-## Config
-
-The below YAML in your config.yml will create the collections:
-
-```yaml
-libraries:
-  Movies:
-    collection_files:
-      - default: based
-  TV Shows:
-    collection_files:
-      - default: based
-```
-
-## Template Variables
-
-Template Variables can be used to manipulate the file in various ways to slightly change how it works without having to 
-make your own local copy.
-
-Note that the `template_variables:` section only needs to be used if you do want to actually change how the defaults 
-work. Any value not specified will use its default value if it has one if not it's just ignored.
-
-??? example "Example Template Variable Amendments (Click to Expand)"
-
-    The below is an example config.yml extract with some Template Variables added in to change how the file works.
-
-    Click the :fontawesome-solid-circle-plus: icon to learn more
-    
+{% include-markdown "./../templates/defaults_mid_both.md" replace='{"CODE_NAME": "based"}' %}
     ```yaml
     libraries:
       Movies:
@@ -67,23 +35,12 @@ work. Any value not specified will use its default value if it has one if not it
 
     1.  Use the navy [Separator Style](../separators.md#separator-styles)
     2.  Do not create a "Based on a Comic" collection
-    3.  Make the "Based on a True Story" collection appear in the collection list before the other collections in this 
-    file
+    3.  Make the "Based on a True Story" collection appear in the collection list before the other collections in this file
     4.  Pin the "Based on a Video Game" collection to the Recommended tab of the library
     5.  Pin the "Based on a Video Game" collection to the home screen of the server owner
     6.  Pin the "Based on a Video Game" collection to the home screen of other users of the server
 
-* **File-Specific Template Variables** are variables available specifically for this Kometa Defaults File.
-
-* **Shared Template Variables** are additional variables shared across the Kometa Defaults.
-
-* **Shared Separator Variables** are additional variables available since this Default contains a 
-[Separator](../separators.md).
-
-=== "File-Specific Template Variables"
-
-    | Variable                        | Description & Values                                                                                                                                                                                                                                                                                          |
-    | :------------------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+{% include-markdown "./../templates/defaults_variables_header.md" %}
     | `exclude`                       | **Description:** Exclude these Media Outlets from creating a Dynamic Collection.<br>**Values:** List of Media Outlet Keys                                                                                                                                                                                     |
     | `limit_<<key>>`<sup>1</sup>     | **Description:** Changes the Builder Limit of the [key's](#collection_section) collection.<br>**Default:** `limit`<br>**Values:** Number Greater than 0                                                                                                                                                       |
     | `limit`                         | **Description:** Changes the Builder Limit for all collections in a Defaults File.<br>**Values:** Number Greater than 0                                                                                                                                                                                       |
@@ -97,7 +54,4 @@ work. Any value not specified will use its default value if it has one if not it
     1. Each default collection has a [`key`](#collection_section) that you must replace `<<key>>` with when using 
     this Template Variable. These keys are found in the table at the top of this page.
 
-{%
-  include-markdown "./../templates/defaults_variables.md"
-%}
-
+{% include-markdown "./../templates/defaults_variables.md" %}

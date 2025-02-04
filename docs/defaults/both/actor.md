@@ -19,8 +19,8 @@ hide:
     }'
     start="<!--after-image-->"
 %}
-| `<<actor_name>>`<br>**Example:** `Frank Welker` | `<<actor_name>>`<br>**Example:** `Frank Welker` | Collection of Movies/Shows the actor is top billing in.                        |
 {% include-markdown "./../templates/separator_line.md" replace='{"SEPARATOR": "Actors"}' %}
+| `<<actor_name>>`<br>**Example:** `Frank Welker` | `<<actor_name>>`<br>**Example:** `Frank Welker` | Collection of Movies/Shows the actor is top billing in.                        |
 
 {% include-markdown "../people.md" %}
 {% include-markdown "./../templates/defaults_mid_both.md" replace='{"CODE_NAME": "actor"}' %}

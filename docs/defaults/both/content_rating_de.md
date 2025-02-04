@@ -2,6 +2,19 @@
 hide:
   - toc
 ---
+{%
+    include-markdown "./../templates/content_rating.md"
+    replace='{
+        "COLLECTION": "DE Content Rating", 
+        "CODE_NAME": "content_rating_de",
+        "SHORT_NAME": "German",
+        "LIBRARY_TYPE": "Movie, Show",
+        "EXAMPLE_NAME": "Age 5+",
+        "EXAMPLE1": "5",
+        "EXAMPLE2": "G"
+    }'
+    rewrite-relative-urls=false
+%}
 # DE Content Rating Collections
 
 The `content_rating_de` Default Collection File is used to dynamically create collections based on the content ratings 

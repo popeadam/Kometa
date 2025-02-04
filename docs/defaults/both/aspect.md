@@ -12,6 +12,7 @@ hide:
         "DESCRIPTION": "create collections with items that are based on their aspect ratio"
     }'
 %}
+{% include-markdown "./../templates/separator_line.md" replace='{"SEPARATOR": "Aspect Ratio"}' %}
 | `1.33 - Academy Aperture`      | `1.33`      | Collection of Movies/Shows with a 1.33 aspect ratio                            |
 | `1.65 - Early Widescreen`      | `1.65`      | Collection of Movies/Shows with a 1.65 aspect ratio                            |
 | `1.66 - European Widescreen`   | `1.66`      | Collection of Movies/Shows with a 1.66 aspect ratio                            |
@@ -20,7 +21,6 @@ hide:
 | `2.2 - 70mm Frame`             | `2.2`       | Collection of Movies/Shows with a 2.2 aspect ratio                             |
 | `2.35 - Anamorphic Projection` | `2.35`      | Collection of Movies/Shows with a 2.35 aspect ratio                            |
 | `2.77 - Cinerama`              | `2.77`      | Collection of Movies/Shows with a 2.77 aspect ratio                            |
-{% include-markdown "./../templates/separator_line.md" replace='{"SEPARATOR": "Aspect Ratio"}' %}
 
 {% include-markdown "./../templates/defaults_mid_both.md" replace='{"CODE_NAME": "aspect"}' %}
     ```yaml
@@ -51,4 +51,3 @@ hide:
     this Template Variable. These keys are found in the table at the top of this page.
 
 {% include-markdown "./../templates/defaults_variables.md" %}
-
