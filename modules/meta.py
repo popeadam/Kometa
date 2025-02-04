@@ -2395,7 +2395,7 @@ class OverlayFile(DataFile):
                 }
                 for pk, pv in new_pos.items():
                     if pv is None:
-                        raise Failed(f"Config Error: queue missing {pv} attribute")
+                        raise Failed(f"Config Error: queue missing {pk} attribute")
                 final_queue.append(util.parse_cords(new_pos, f"{queue_name} queue", required=True))
                 if overlay_limit and len(final_queue) >= overlay_limit:
                     break

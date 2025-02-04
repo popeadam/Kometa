@@ -3,8 +3,14 @@ hide:
   - toc
 ---
 {%
-    include-markdown "./../templates/defaults_1.md"
-    replace='[["COLLECTION", "Aspect Ratio"], ["CODE_NAME", "aspect"], ["LIBRARY_TYPE", "Movie, Show"], ["SECTION_NUMBER", "125"], ["DESCRIPTION", "create collections with items that are based on their aspect ratio"]]'
+    include-markdown "./../templates/defaults_header.md"
+    replace='{
+        "COLLECTION": "Aspect Ratio", 
+        "CODE_NAME": "aspect",
+        "LIBRARY_TYPE": "Movie, Show", 
+        "SECTION_NUMBER": "125", 
+        "DESCRIPTION": "create collections with items that are based on their aspect ratio"
+    }'
 %}
 | `1.33 - Academy Aperture`      | `1.33`      | Collection of Movies/Shows with a 1.33 aspect ratio                            |
 | `1.65 - Early Widescreen`      | `1.65`      | Collection of Movies/Shows with a 1.65 aspect ratio                            |
@@ -14,22 +20,9 @@ hide:
 | `2.2 - 70mm Frame`             | `2.2`       | Collection of Movies/Shows with a 2.2 aspect ratio                             |
 | `2.35 - Anamorphic Projection` | `2.35`      | Collection of Movies/Shows with a 2.35 aspect ratio                            |
 | `2.77 - Cinerama`              | `2.77`      | Collection of Movies/Shows with a 2.77 aspect ratio                            |
-| `Aspect Ratio Collections`     | `separator` | [Separator Collection](../separators.md) to denote the Section of Collections. |
+{% include-markdown "./../templates/separator_line.md" replace='{"SEPARATOR": "Aspect Ratio"}' %}
 
-{%
-    include-markdown "./../templates/defaults_2.md"
-%}
-{%
-    include-markdown "./../templates/movie_example.md"
-    replace='["CODE_NAME", "actor"]'
-%}
-{%
-    include-markdown "./../templates/show_example.md"
-    replace='["CODE_NAME", "actor"]'
-%}
-{%
-    include-markdown "./../templates/defaults_3.md"
-%}
+{% include-markdown "./../templates/defaults_mid_both.md" replace='{"CODE_NAME": "aspect"}' %}
     ```yaml
     libraries:
       Movies:
@@ -43,9 +36,7 @@ hide:
     1.  Do not create a "1.65 - Early Widescreen" collection
     2.  Use the plum [Separator Style](../separators.md#separator-styles)
 
-{%
-    include-markdown "./../templates/defaults_4.md"
-%}
+{% include-markdown "./../templates/defaults_variables_header.md" %}
     | `exclude`                       | **Description:** Exclude these Media Outlets from creating a Dynamic Collection.<br>**Values:** List of Media Outlet Keys                                                                                                                                                                                     |
     | `limit_<<key>>`<sup>1</sup>     | **Description:** Changes the Builder Limit of the [key's](#collection_section) collection.<br>**Default:** `limit`<br>**Values:** Number Greater than 0                                                                                                                                                       |
     | `limit`                         | **Description:** Changes the Builder Limit for all collections in a Defaults File.<br>**Values:** Number Greater than 0                                                                                                                                                                                       |
@@ -59,7 +50,5 @@ hide:
     1. Each default collection has a [`key`](#collection_section) that you must replace `<<key>>` with when using 
     this Template Variable. These keys are found in the table at the top of this page.
 
-{%
-  include-markdown "./../templates/defaults_5.md"
-%}
+{% include-markdown "./../templates/defaults_variables.md" %}
 

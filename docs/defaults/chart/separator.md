@@ -60,9 +60,8 @@ work. Any value not specified will use its default value if it has one if not it
 * **Shared Separator Variables** are additional variables available since this Default contains a 
 [Separator](../separators.md).
 
-=== "Shared Separator Variables"
-
-    {%
-      include-markdown "../templates/separator_variables.md"
-    %}
+{%
+  include-markdown "./../templates/defaults_variables.md"
+  start="<!--space-->"
+%}
 

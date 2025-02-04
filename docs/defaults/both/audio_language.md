@@ -2,23 +2,18 @@
 hide:
   - toc
 ---
-# Audio Language Collections
-
-The `audio_language` Default Collection File is used to dynamically create collections based on the audio languages 
-available in your library.
-
-![](../images/audio_language.png)
-
-## Requirements & Recommendations
-
-Supported Library Types: Movie, Show
-
-## <a id="collection_section"></a>Collections Section 090
-
-| Collection                                            | Key                                                                                      | Description                                                                    |
-| :---------------------------------------------------- | :--------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------- |
+{%
+    include-markdown "./../templates/defaults_header.md"
+    replace='{
+        "COLLECTION": "Audio Language", 
+        "CODE_NAME": "audio_language",
+        "LIBRARY_TYPE": "Movie, Show", 
+        "SECTION_NUMBER": "090", 
+        "DESCRIPTION": "dynamically create collections based on the audio languages available in your library"
+    }'
+%}
 | `<<Audio Language>> Audio`<br>**Example:** `Japanese` | `<<ISO 639-1 Code>>`<br>**Example:** `ja` <br>`<<ISO 639-2 Code>>`<br>**Example:** `myn` | Collection of Movies/Shows that have this Audio Language.                      |
-| `Audio Language Collections`                          | `separator`                                                                              | [Separator Collection](../separators.md) to denote the Section of Collections. |
+{% include-markdown "./../templates/separator_line.md" replace='{"SEPARATOR": "Audio Language"}' %}
 | `Other Audio`                                         | `other`                                                                                  | Collection of Movies/Shows that are less common Languages.                     |
 
 ## Config
@@ -92,17 +87,9 @@ work. Any value not specified will use its default value if it has one if not it
     1. Each default collection has a [`key`](#collection_section) that you must replace `<<key>>` with when using 
     this Template Variable. These keys are found in the table at the top of this page.
 
-=== "Shared Template Variables"
-
-    {%
-      include-markdown "../templates/collection_variables.md"
-    %}
-
-=== "Shared Separator Variables"
-
-    {%
-      include-markdown "../templates/separator_variables.md"
-    %}
+{%
+  include-markdown "./../templates/defaults_variables.md"
+%}
 
 
 

@@ -17,7 +17,7 @@ Plex does not support creating these empty collections natively through its UI, 
 These are all the files that contain a separator 
 
 | Collection Name               | Default File        |
-| ----------------------------- | :------------------ |
+|-------------------------------|:--------------------|
 | Actors Collections            | `actor`             |
 | Audio Language Collections    | `audio_language`    |
 | Award Collections             | `separator_award`   |
@@ -48,7 +48,8 @@ Note that the `template_variables:` section only needs to be used if you do want
 **[Shared Variables](templates/collection_variables.md) are NOT available to separator collections in any Defaults File.**
 
 {%
-  include-markdown "./templates/separator_variables.md"
+  include-markdown "./templates/defaults_variables.md"
+  start="<!--space-->"
 %}
 
 ## Use Separators
@@ -82,7 +83,7 @@ Multiple styles are available for Separators, to match Plex's "categories" featu
 The available styles available are:
 
 | Style    | Value      |
-| :------- | :--------- |
+|:---------|:-----------|
 | Amethyst | `amethyst` |
 | Aqua     | `aqua`     |
 | Blue     | `blue`     |

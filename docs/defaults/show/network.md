@@ -107,17 +107,9 @@ work. Any value not specified will use its default value if it has one if not it
 
     1. Each default collection has a `key` that when calling to effect a specific collection you must replace `<<key>>` with when calling.
 
-=== "Shared Template Variables"
-
-    {%
-      include-markdown "../templates/collection_variables.md"
-    %}
-
-=== "Shared Separator Variables"
-
-    {%
-      include-markdown "../templates/separator_variables.md"
-    %}
+{%
+  include-markdown "./../templates/defaults_variables.md"
+%}
 
 ## Default Values
 

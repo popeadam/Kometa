@@ -4,6 +4,5 @@
 
 {%
   include-markdown "https://raw.githubusercontent.com/Kometa-Team/Quickstart/refs/heads/main/README.md"
-  rewrite-relative-urls=true
   comments=false
 %}

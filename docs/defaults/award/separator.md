@@ -3,25 +3,18 @@ hide:
   - toc
 ---
 {%
-    include-markdown "./../templates/defaults_1.md"
-    replace='[["COLLECTION", "Award Separator"], ["CODE_NAME", "separator_award"], ["LIBRARY_TYPE", "Movie, Show"], ["SECTION_NUMBER", "130"], ["DESCRIPTION", "create a separator collection for Awards"]]'
+    include-markdown "./../templates/defaults_header.md"
+    replace='{
+        "COLLECTION": "Award Separator",
+        "CODE_NAME": "separator_award",
+        "LIBRARY_TYPE": "Movie, Show",
+        "SECTION_NUMBER": "130",
+        "DESCRIPTION": "create a separator collection for Awards"
+    }'
 %}
-| `Award Collections` | `separator` | [Separator Collection](../separators.md) to denote the Section of Collections. |
+{% include-markdown "./../templates/separator_line.md" replace='{"SEPARATOR": "Award"}' %}
 
-{%
-    include-markdown "./../templates/defaults_2.md"
-%}
-{%
-    include-markdown "./../templates/movie_example.md"
-    replace='["CODE_NAME", "actor"]'
-%}
-{%
-    include-markdown "./../templates/show_example.md"
-    replace='["CODE_NAME", "actor"]'
-%}
-{%
-    include-markdown "./../templates/defaults_3.md"
-%}
+{% include-markdown "./../templates/defaults_mid_both.md" replace='{"CODE_NAME": "separator_award"}' %}
     ```yaml
     libraries:
       Movies:
@@ -33,12 +26,5 @@ hide:
 
     1.  Use the purple [Separator Style](../separators.md#separator-styles)
 
-{%
-  include-markdown "./../templates/defaults_4.md"
-  start="<!--space-->"
-  end="<!--space2-->"
-%}
-{%
-  include-markdown "./../templates/defaults_5.md"
-  start="<!--space-->"
-%}
+{% include-markdown "./../templates/defaults_variables_header.md" start="<!--space-->" end="<!--space2-->" %}
+{% include-markdown "./../templates/defaults_variables.md" start="<!--space-->" %}

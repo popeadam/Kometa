@@ -103,7 +103,7 @@
     include-markdown "../README.md"
     start="<!--started-start-->"
     end="<!--started-end-->"
-    replace='["(https://kometa.wiki/en/latest/", "("]'
+    replace='{"(https://kometa.wiki/en/latest/": "("}'
     rewrite-relative-urls=false
 %}
 

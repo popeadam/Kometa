@@ -107,17 +107,9 @@ Note that the `template_variables:` section only needs to be used if you do want
 
     1. Each default collection has a `key` that when calling to effect a specific collection you must replace `<<key>>` with when calling.
 
-=== "Shared Template Variables"
-
-    {%
-      include-markdown "../templates/collection_variables.md"
-    %}
-
-=== "Shared Separator Variables"
-
-    {%
-      include-markdown "../templates/separator_variables.md"
-    %}
+{%
+  include-markdown "./../templates/defaults_variables.md"
+%}
 
 
 

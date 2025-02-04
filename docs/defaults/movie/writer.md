@@ -96,15 +96,7 @@ work. Any value not specified will use its default value if it has one if not it
     1. Each default collection has a [`key`](#collection_section) that you must replace `<<key>>` with when using 
     this Template Variable. These keys are found in the table at the top of this page.
 
-=== "Shared Template Variables"
-
-    {%
-      include-markdown "../templates/collection_variables.md"
-    %}
-
-=== "Shared Separator Variables"
-
-    {%
-      include-markdown "../templates/separator_variables.md"
-    %}
+{%
+  include-markdown "./../templates/defaults_variables.md"
+%}
 
