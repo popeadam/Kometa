@@ -238,7 +238,7 @@ Each file has a page on the wiki showing the available `template_variables` for 
 `default: ratings` has a page [here](overlays/ratings.md).
 
 **In addition to the defined `template_variables` almost all default Overlay Files have access to the 
-[Shared Variables](collection_variables.md).**
+[Shared Variables](templates/collection_variables.md).**
 
 ### Custom fonts used in these examples:
 

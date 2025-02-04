@@ -93,6 +93,6 @@ work. Any value not specified will use its default value if it has one if not it
 === "Shared Template Variables"
 
     {%
-      include-markdown "../collection_variables.md"
+      include-markdown "../templates/collection_variables.md"
     %}
 

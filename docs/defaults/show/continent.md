@@ -111,13 +111,13 @@ Note that the `template_variables:` section only needs to be used if you do want
 === "Shared Template Variables"
 
     {%
-      include-markdown "../collection_variables.md"
+      include-markdown "../templates/collection_variables.md"
     %}
 
 === "Shared Separator Variables"
 
     {%
-      include-markdown "../separator_variables.md"
+      include-markdown "../templates/separator_variables.md"
     %}
 
 ## Default Values

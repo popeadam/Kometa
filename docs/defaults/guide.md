@@ -129,7 +129,7 @@ All of the Defaults Files are customized in this basic fashion.
 
 Each of these Defaults Files has a page on the wiki showing its keys, available `template_variables`, and default settings.  For example, the Defaults Overlay File `default: resolution` has a page [here](overlays/resolution.md).
 
-The shared Template Variables can be reviewed here for [Collections](collection_variables.md) and [Overlays](overlay_variables.md).  These are also linked from each Defaults File's wiki page.  Keep in mind that *most*, but not all Defaults Files have access to the shared variables.  This will be noted on the individual files' page.
+The shared Template Variables can be reviewed here for [Collections](templates/collection_variables.md) and [Overlays](overlay_variables.md).  These are also linked from each Defaults File's wiki page.  Keep in mind that *most*, but not all Defaults Files have access to the shared variables.  This will be noted on the individual files' page.
 
 ## Collection Defaults
 

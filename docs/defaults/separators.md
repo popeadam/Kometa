@@ -45,10 +45,10 @@ Template Variables can be used to manipulate the file in various ways to slightl
 
 Note that the `template_variables:` section only needs to be used if you do want to actually change how the Defaults work. Any value not specified is its default value if it has one if not it's just ignored.
 
-**[Shared Variables](collection_variables.md) are NOT available to separator collections in any Defaults File.**
+**[Shared Variables](templates/collection_variables.md) are NOT available to separator collections in any Defaults File.**
 
 {%
-  include-markdown "./separator_variables.md"
+  include-markdown "./templates/separator_variables.md"
 %}
 
 ## Use Separators

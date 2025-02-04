@@ -3,19 +3,19 @@ hide:
   - toc
 ---
 {%
-    include-markdown "./award_1.md"
+    include-markdown "./../templates/award_1.md"
     replace='[["FULL_NAME", "Independent Spirit"], ["CODE_NAME", "spirit"], ["LIBRARY_TYPE", "Movie"]]'
 %}
 | `Independent Spirit Best Feature Winners` | `best` | Collection of Independent Spirit Best Feature Award Winners. |
 {%
-    include-markdown "./award_2.md"
+    include-markdown "./../templates/award_2.md"
     replace='[["FULL_NAME", "Independent Spirit"], ["SHORT_NAME", "Independent Spirit"]]'
 %}
 {%
-    include-markdown "./../movie_example.md"
+    include-markdown "./../templates/movie_example.md"
     replace='["CODE_NAME", "spirit"]'
 %}
 {%
-    include-markdown "./award_3.md"
+    include-markdown "./../templates/award_3.md"
     replace='[["SHORT_NAME", "Independent Spirit"], ["CODE_NAME", "spirit"]]'
 %}

@@ -3,19 +3,19 @@ hide:
   - toc
 ---
 {%
-    include-markdown "./award_1.md"
+    include-markdown "./../templates/award_1.md"
     replace='[["FULL_NAME", "Berlin International Film Festival"], ["CODE_NAME", "berlinale"], ["LIBRARY_TYPE", "Movie"]]'
 %}
 | `Berlinale Golden Bears` | `golden` | Collection of Berlin International Film Festival Golden Bear Award Winners. |
 {%
-    include-markdown "./award_2.md"
+    include-markdown "./../templates/award_2.md"
     replace='[["FULL_NAME", "Berlin International Film Festival"], ["SHORT_NAME", "Berlinale"]]'
 %}
 {%
-    include-markdown "./../movie_example.md"
+    include-markdown "./../templates/movie_example.md"
     replace='["CODE_NAME", "berlinale"]'
 %}
 {%
-    include-markdown "./award_3.md"
+    include-markdown "./../templates/award_3.md"
     replace='[["SHORT_NAME", "Berlinale"], ["CODE_NAME", "berlinale"]]'
 %}

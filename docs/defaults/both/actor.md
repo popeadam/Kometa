@@ -2,14 +2,15 @@
 hide:
   - toc
 ---
-# Actor Collections
-
-The `actor` Default Collection File is used to dynamically create collections based on the most popular actors/actresses 
-in your library.
-
 {%
-    include-markdown "./../defaults_1.md"
+    include-markdown "./../templates/defaults_1.md"
+    replace='[["COLLECTION", "Actor"], ["CODE_NAME", "actor"], ["DESCRIPTION", "dynamically create collections based on the most popular actors/actresses in your library"]]'
+    end="<!--before-image-->"
+%}
+{%
+    include-markdown "./../templates/defaults_1.md"
     replace='[["LIBRARY_TYPE", "Movie, Show"], ["SECTION_NUMBER", "140"]]'
+    start="<!--after-image-->"
 %}
 | `<<actor_name>>`<br>**Example:** `Frank Welker` | `<<actor_name>>`<br>**Example:** `Frank Welker` | Collection of Movies/Shows the actor is top billing in.                        |
 | `Actors Collections`                            | `separator`                                     | [Separator Collection](../separators.md) to denote the Section of Collections. |
@@ -18,18 +19,18 @@ in your library.
   include-markdown "../people.md"
 %}
 {%
-    include-markdown "./../defaults_2.md"
+    include-markdown "./../templates/defaults_2.md"
 %}
 {%
-    include-markdown "./../movie_example.md"
+    include-markdown "./../templates/movie_example.md"
     replace='["CODE_NAME", "actor"]'
 %}
 {%
-    include-markdown "./../show_example.md"
+    include-markdown "./../templates/show_example.md"
     replace='["CODE_NAME", "actor"]'
 %}
 {%
-    include-markdown "./../defaults_3.md"
+    include-markdown "./../templates/defaults_3.md"
 %}
     ```yaml
     libraries:
@@ -53,16 +54,9 @@ in your library.
     5.  There are two Richard Brooks, so use the 2nd 
     [Richard Brooks](https://www.themoviedb.org/search?query=Richard%20Brooks) found on TMDb
 
-* **File-Specific Template Variables** are variables available specifically for this Kometa Defaults File.
-
-* **Shared Template Variables** are additional variables shared across the Kometa Defaults.
-
-* **Shared Separator Variables** are additional variables available since this Default contains a [Separator](../separators.md).
-
-=== "File-Specific Template Variables"
-
-    | Variable                                 | Description & Values                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
-    | :--------------------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+{%
+    include-markdown "./../templates/defaults_4.md"
+%}
     | `data`                                   | **Description:** Replaces the `data` dynamic collection value.<table class="clearTable"><tr><th>Attribute</th><th>Description & Values</th></tr><tr><td><code>depth</code></td><td>Controls the depth within the casting credits to search for common actors<br><strong>Default:</strong> 5<br><strong>Values:</strong> Number greater than 0</td></tr><tr><td><code>limit</code></td><td>Controls the maximum number of collections to create<br><strong>Default:</strong> 25<br><strong>Values:</strong> Number greater than 0</td></tr></table> |
     | `exclude`                                | **Description:** Exclude these Actors from creating a Dynamic Collection.<br>**Values:** List of Actor Names                                                                                                                                                                                                                                                                                                                                                                                                                                       |
     | `include`                                | **Description:** Force these Actors to be included to create a Dynamic Collection.<br>**Values:** List of Actor Names                                                                                                                                                                                                                                                                                                                                                                                                                              |
@@ -79,16 +73,6 @@ in your library.
     1. Each default collection has a [`key`](#collection_section) that you must replace `<<key>>` with when using 
     this Template Variable. These keys are found in the table at the top of this page.
 
-=== "Shared Template Variables"
-
-    {%
-      include-markdown "../collection_variables.md"
-    %}
-
-=== "Shared Separator Variables"
-
-    {%
-      include-markdown "../separator_variables.md"
-    %}
-
-
+{%
+  include-markdown "./../templates/defaults_5.md"
+%}

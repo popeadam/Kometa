@@ -2,20 +2,10 @@
 hide:
   - toc
 ---
-# Aspect Ratio Collections
-
-The `aspect` Default Collection File is used to create collections with items that are based on their aspect ratio.
-
-![](../images/aspect.png)
-
-## Requirements & Recommendations
-
-Supported Library Types: Movie, Show
-
-## <a id="collection_section"></a>Collections Section 125
-
-| Collection                     | Key         | Description                                                                    |
-| :----------------------------- | :---------- | :----------------------------------------------------------------------------- |
+{%
+    include-markdown "./../templates/defaults_1.md"
+    replace='[["COLLECTION", "Aspect Ratio"], ["CODE_NAME", "aspect"], ["LIBRARY_TYPE", "Movie, Show"], ["SECTION_NUMBER", "125"], ["DESCRIPTION", "create collections with items that are based on their aspect ratio"]]'
+%}
 | `1.33 - Academy Aperture`      | `1.33`      | Collection of Movies/Shows with a 1.33 aspect ratio                            |
 | `1.65 - Early Widescreen`      | `1.65`      | Collection of Movies/Shows with a 1.65 aspect ratio                            |
 | `1.66 - European Widescreen`   | `1.66`      | Collection of Movies/Shows with a 1.66 aspect ratio                            |
@@ -26,34 +16,20 @@ Supported Library Types: Movie, Show
 | `2.77 - Cinerama`              | `2.77`      | Collection of Movies/Shows with a 2.77 aspect ratio                            |
 | `Aspect Ratio Collections`     | `separator` | [Separator Collection](../separators.md) to denote the Section of Collections. |
 
-## Config
-
-The below YAML in your config.yml will create the collections:
-
-```yaml
-libraries:
-  Movies:
-    collection_files:
-      - default: aspect
-  TV Shows:
-    collection_files:
-      - default: aspect
-```
-
-## Template Variables
-
-Template Variables can be used to manipulate the file in various ways to slightly change how it works without having to 
-make your own local copy.
-
-Note that the `template_variables:` section only needs to be used if you do want to actually change how the defaults 
-work. Any value not specified will use its default value if it has one if not it's just ignored.
-
-??? example "Example Template Variable Amendments (Click to Expand)"
-
-    The below is an example config.yml extract with some Template Variables added in to change how the file works.
-
-    Click the :fontawesome-solid-circle-plus: icon to learn more
-    
+{%
+    include-markdown "./../templates/defaults_2.md"
+%}
+{%
+    include-markdown "./../templates/movie_example.md"
+    replace='["CODE_NAME", "actor"]'
+%}
+{%
+    include-markdown "./../templates/show_example.md"
+    replace='["CODE_NAME", "actor"]'
+%}
+{%
+    include-markdown "./../templates/defaults_3.md"
+%}
     ```yaml
     libraries:
       Movies:
@@ -67,17 +43,9 @@ work. Any value not specified will use its default value if it has one if not it
     1.  Do not create a "1.65 - Early Widescreen" collection
     2.  Use the plum [Separator Style](../separators.md#separator-styles)
 
-* **File-Specific Template Variables** are variables available specifically for this Kometa Defaults File.
-
-* **Shared Template Variables** are additional variables shared across the Kometa Defaults.
-
-* **Shared Separator Variables** are additional variables available since this Default contains a 
-[Separator](../separators.md).
-
-=== "File-Specific Template Variables"
-
-    | Variable                        | Description & Values                                                                                                                                                                                                                                                                                          |
-    | :------------------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+{%
+    include-markdown "./../templates/defaults_4.md"
+%}
     | `exclude`                       | **Description:** Exclude these Media Outlets from creating a Dynamic Collection.<br>**Values:** List of Media Outlet Keys                                                                                                                                                                                     |
     | `limit_<<key>>`<sup>1</sup>     | **Description:** Changes the Builder Limit of the [key's](#collection_section) collection.<br>**Default:** `limit`<br>**Values:** Number Greater than 0                                                                                                                                                       |
     | `limit`                         | **Description:** Changes the Builder Limit for all collections in a Defaults File.<br>**Values:** Number Greater than 0                                                                                                                                                                                       |
@@ -91,16 +59,7 @@ work. Any value not specified will use its default value if it has one if not it
     1. Each default collection has a [`key`](#collection_section) that you must replace `<<key>>` with when using 
     this Template Variable. These keys are found in the table at the top of this page.
 
-=== "Shared Template Variables"
-
-    {%
-      include-markdown "../collection_variables.md"
-    %}
-
-=== "Shared Separator Variables"
-
-    {%
-      include-markdown "../separator_variables.md"
-    %}
-
+{%
+  include-markdown "./../templates/defaults_5.md"
+%}
 

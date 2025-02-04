@@ -1,5 +1,5 @@
 {%
-    include-markdown "./../defaults_3.md"
+    include-markdown "./defaults_3.md"
 %}
     ```yaml
     libraries:
@@ -22,9 +22,10 @@
     4.  Change the name of the collections to "SHORT_NAME yearhere Winners".
     5.  Creates collections from 10 award shows back to the latest award show.
 
-* **File-Specific Template Variables** are variables available specifically for this Kometa Defaults File.
-
-* **Shared Template Variables** are additional variables shared across the Kometa Defaults.
+{%
+    include-markdown "./defaults_4.md"
+    end="<!--space-->"
+%}
 
 === "File-Specific Template Variables"
 
@@ -44,9 +45,7 @@
     1. Each default collection has a [`key`](#collection_section) that you must replace `<<key>>` with when using 
     this Template Variable. These keys are found in the table at the top of this page.
 
-=== "Shared Template Variables"
-
-    {%
-      include-markdown "../collection_variables.md"
-    %}
-
+{%
+  include-markdown "./defaults_5.md"
+  end="<!--space-->"
+%}

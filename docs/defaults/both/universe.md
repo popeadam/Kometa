@@ -113,13 +113,13 @@ work. Any value not specified will use its default value if it has one if not it
 === "Shared Template Variables"
 
     {%
-      include-markdown "../collection_variables.md"
+      include-markdown "../templates/collection_variables.md"
     %}
 
 === "Shared Separator Variables"
 
     {%
-      include-markdown "../separator_variables.md"
+      include-markdown "../templates/separator_variables.md"
     %}
 
 
