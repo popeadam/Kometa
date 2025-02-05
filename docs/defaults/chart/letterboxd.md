@@ -2,24 +2,19 @@
 hide:
   - toc
 ---
-# Letterboxd Charts Collections
-
-The `letterboxd` Default Collection File is used to create collections based on lists from Letterboxd.
-
-![](../images/letterboxd.png)
-
-## Requirements & Recommendations
-
-Supported Library Types: Movie
-
-Recommendations: Users might consider increasing the value set for the Template Variable `cache_builders:` as several lists are in excess of 1,000 items and are not updated daily. 
-
-The collections `IMDb Top 250 (Letterboxd)`, `Oscar Best Picture Winners`, and `Cannes Palme d'Or Winners` are turned off by default as these collections already exist within other defaults. Refer to the examples below for turning the collections on within the Letterboxd defaults using Template Variables.
-
-## <a id="collection_section"></a>Collections Section 020
-
-| Collection                       | Key                 | Description                                                                   |
-| :------------------------------- | :------------------ | :---------------------------------------------------------------------------- |
+{%
+    include-markdown "./../templates/defaults_header.md"
+    replace='{
+        "COLLECTION": "Letterboxd Charts", 
+        "CODE_NAME": "letterboxd",
+        "LIBRARY_TYPE": "Movie", 
+        "DESCRIPTION": "create collections based on lists from Letterboxd",
+        "SECTION_NUMBER": "020"
+    }'
+    replace-tags='{"space": "Cannes Palme d\'Or Winners"}
+    
+%}
+ereplace-tags='{"space": "Recommendations: Users might consider increasing the value set for the Template Variable `cache_builders:` as several lists are in excess of 1,000 items and are not updated daily. The collections `IMDb Top 250 (Letterboxd)`, `Oscar Best Picture Winners`, and `Cannes Palme d\'Or Winners` are turned off by default as these collections already exist within other defaults. Refer to the examples below for turning the collections on within the Letterboxd defaults using Template Variables."}'
 | `1,001 To See Before You Die`    | `1001_movies`       | Collection of 1,001 Movies You Must See Before You Die.                       |
 | `AFI 100 Years 100 Movies`       | `afi_100`           | Collection of AFI's 100 Years...100 Movies.                                   |
 | `Box Office Mojo All Time 100`   | `boxofficemojo_100` | Collection of Box Office Mojo's all-time top 100 films.                       |
@@ -37,31 +32,7 @@ The collections `IMDb Top 250 (Letterboxd)`, `Oscar Best Picture Winners`, and `
 | `Top 250 Most Fans`              | `most_fans`         | Collection of the Top 250 films with the most fans on Letterboxd.             |
 | `Top 250 Women-Directed`         | `women_directors`   | Collection of the Top 250 Women-Directed films on Letterboxd.                 |
 
-## Config
-
-The below YAML in your config.yml will create the collections:
-
-```yaml
-libraries:
-  Movies:
-    collection_files:
-      - default: letterboxd
-```
-
-## Template Variables
-
-Template Variables can be used to manipulate the file in various ways to slightly change how it works without having to 
-make your own local copy.
-
-Note that the `template_variables:` section only needs to be used if you do want to actually change how the defaults 
-work. Any value not specified will use its default value if it has one if not it's just ignored.
-
-??? example "Example Template Variable Amendments (Click to Expand)"
-
-    The below is an example config.yml extract with some Template Variables added in to change how the file works.
-
-    Click the :fontawesome-solid-circle-plus: icon to learn more
-    
+{% include-markdown "./../templates/defaults_mid_movie.md" replace='{"CODE_NAME": "letterboxd"}' %}
     ```yaml
     libraries:
       Movies:
@@ -89,14 +60,7 @@ work. Any value not specified will use its default value if it has one if not it
     8.  Set the value for `cache_builders` for the "1,001 To See Before You Die" collection to 30 days
     9.  Set the value for `cache_builders` for the "Edgar Wright's 1,000 Favorites" collection to 30 days
 
-* **File-Specific Template Variables** are variables available specifically for this Kometa Defaults File.
-
-* **Shared Template Variables** are additional variables shared across the Kometa Defaults.
-
-=== "File-Specific Template Variables"
-
-    | Variable                               | Description & Values                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-    | :------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+{% include-markdown "./../templates/defaults_variables_header.md" exclude-tags="separator" %}
     | `cache_builders_<<key>>`               | **Description:** Changes the Builder Cache of the [key's](#collection_section) collection.<br>**Default:** `1`<br>**Values:** number 0 or greater                                                                                                                                                                                                                                                                                                                                                                                                      |
     | `cache_builders`                       | **Description:** Changes the Builder Cache for all collections in a Defaults File.<br>**Default:** `1`<br>**Values:** number 0 or greater                                                                                                                                                                                                                                                                                                                                                                                                              |
     | `collection_order_<<key>>`<sup>1</sup> | **Description:** Changes the Collection Order of the [key's](#collection_section) collection.<br>**Default:** `collection_order`<br>**Values:**<table class="clearTable"><tr><td>`release`</td><td>Order Collection by Release Dates</td></tr><tr><td>`alpha`</td><td>Order Collection Alphabetically</td></tr><tr><td>`custom`</td><td>Order Collection Via the Builder Order</td></tr><tr><td>[Any `plex_search` Sort Option](../../files/builders/plex.md#sort-options)</td><td>Order Collection by any `plex_search` Sort Option</td></tr></table> |
@@ -108,8 +72,4 @@ work. Any value not specified will use its default value if it has one if not it
     1. Each default collection has a [`key`](#collection_section) that you must replace `<<key>>` with when using 
     this Template Variable. These keys are found in the table at the top of this page.
 
-{%
-  include-markdown "./../templates/defaults_variables.md"
-  end="<!--space-->"
-%}
-
+{% include-markdown "./../templates/defaults_variables.md" end="<!--space-->" %}

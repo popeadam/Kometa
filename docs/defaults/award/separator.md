@@ -26,5 +26,5 @@ hide:
 
     1.  Use the purple [Separator Style](../separators.md#separator-styles)
 
-{% include-markdown "./../templates/defaults_variables_header.md" start="<!--space-->" end="<!--space2-->" %}
+{% include-markdown "./../templates/defaults_variables_header.md" only-include="separator" %}
 {% include-markdown "./../templates/defaults_variables.md" start="<!--space-->" %}

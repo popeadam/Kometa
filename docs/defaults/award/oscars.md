@@ -1,3 +1,7 @@
+---
+hide:
+  - toc
+---
 {%
     include-markdown "./../templates/award_header.md"
     replace='{

@@ -9,7 +9,7 @@ library.
 
 **[This file has a Show Library Counterpart.](../show/country.md)**
 
-![](../images/country1.png)
+![](../images/country.png)
 
 ## Requirements & Recommendations
 
@@ -38,7 +38,7 @@ libraries:
 
 Below is a screenshot of the alternative Color (`color`) style which can be set via the `style` Template Variable.
 
-![](../images/country2.png)
+![](../images/country_style.png)
 
 ## Template Variables
 

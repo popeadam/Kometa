@@ -17,7 +17,7 @@ hide:
 | `AniList Top Rated` | `top`      | Collection of the Top Rated Anime on AniList.        |
 | `AniList Trending`  | `trending` | Collection of the Trending Anime on AniList.         |
 
-{% include-markdown "./../templates/defaults_mid_both.md" replace='{"CODE_NAME": "anilist"}' %}    
+{% include-markdown "./../templates/defaults_mid_both.md" replace='{"CODE_NAME": "anilist"}' %}
     ```yaml
     libraries:
       Movies:
@@ -41,15 +41,7 @@ hide:
     6.  Pin the "AniList Popular" collection to the home screen of the server owner
     7.  Pin the "AniList Popular" collection to the home screen of other users of the server
 
-end="<!--space-->"
-* **File-Specific Template Variables** are variables available specifically for this Kometa Defaults File.
-
-* **Shared Template Variables** are additional variables shared across the Kometa Defaults.
-
-=== "File-Specific Template Variables"
-
-    | Variable                               | Description & Values                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-    | :------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+{% include-markdown "./../templates/defaults_variables_header.md" exclude-tags="separator" %}
     | `collection_order_<<key>>`<sup>1</sup> | **Description:** Changes the Collection Order of the [key's](#collection_section) collection.<br>**Default:** `collection_order`<br>**Values:**<table class="clearTable"><tr><td>`release`</td><td>Order Collection by Release Dates</td></tr><tr><td>`alpha`</td><td>Order Collection Alphabetically</td></tr><tr><td>`custom`</td><td>Order Collection Via the Builder Order</td></tr><tr><td>[Any `plex_search` Sort Option](../../files/builders/plex.md#sort-options)</td><td>Order Collection by any `plex_search` Sort Option</td></tr></table> |
     | `collection_order`                     | **Description:** Changes the Collection Order for all collections in a Defaults File.<br>**Default:** `custom`<br>**Values:**<table class="clearTable"><tr><td>`release`</td><td>Order Collection by Release Dates</td></tr><tr><td>`alpha`</td><td>Order Collection Alphabetically</td></tr><tr><td>`custom`</td><td>Order Collection Via the Builder Order</td></tr><tr><td>[Any `plex_search` Sort Option](../../files/builders/plex.md#sort-options)</td><td>Order Collection by any `plex_search` Sort Option</td></tr></table>                   |
     | `limit_<<key>>`<sup>1</sup>            | **Description:** Changes the number of items in a collection of the [key's](#collection_section) collection.<br>**Default:** `limit`<br>**Values:** Number greater than 0                                                                                                                                                                                                                                                                                                                                                                              |
@@ -61,7 +53,4 @@ end="<!--space-->"
     1. Each default collection has a [`key`](#collection_section) that you must replace `<<key>>` with when using 
     this Template Variable. These keys are found in the table at the top of this page.
 
-{%
-  include-markdown "./../templates/defaults_variables.md"
-  end="<!--space-->"
-%}
+{% include-markdown "./../templates/defaults_variables.md" end="<!--space-->" %}

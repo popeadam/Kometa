@@ -38,8 +38,7 @@ Recommendation: Set the Certification Country within your library's advanced set
     1.  Use the stb [Separator Style](../separators.md#separator-styles)
     2.  Do not create a "Not Rated Movies/Shows" collection
     3.  Defines a collection which will be called "EXAMPLE1", this does not need to already exist in your library
-    4.  Adds the "EXAMPLE2" content rating to the "EXAMPLE1" addon list, "EXAMPLE2" must exist in your library if the "EXAMPLE1" content 
-    rating does not
+    4.  Adds the "EXAMPLE2" content rating to the "EXAMPLE1" addon list, "EXAMPLE2" must exist in your library if the "EXAMPLE1" content rating does not
 
 {% include-markdown "./defaults_variables_header.md" %}
     | `addons`                      | **Description:** Overrides the [default addons dictionary](#default-values). Defines how multiple keys can be combined under a parent key. The parent key doesn't have to already exist in Plex<br>**Values:** Dictionary List of Content Ratings found in your library |

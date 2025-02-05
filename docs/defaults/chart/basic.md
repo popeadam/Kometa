@@ -2,51 +2,20 @@
 hide:
   - toc
 ---
-# Basic Charts Collections
-
-The `basic` Default Collection File is used to create collections based on recently released media in your library.
-
-![](../images/basic.png)
-
-## Requirements & Recommendations
-
-Supported Library Types: Movie, Show
-
-## <a id="collection_section"></a>Collections Section 010
-
-| Collection       | Key        | Description                                                    |
-| :--------------- | :--------- | :------------------------------------------------------------- |
+{%
+    include-markdown "./../templates/defaults_header.md"
+    replace='{
+        "COLLECTION": "Basic Charts", 
+        "CODE_NAME": "basic",
+        "LIBRARY_TYPE": "Movie, Show", 
+        "SECTION_NUMBER": "010", 
+        "DESCRIPTION": "create collections based on recently released media in your library"
+    }'
+%}
 | `New Episodes`   | `episodes` | Collection of Episodes released in the last 7 days.            |
 | `Newly Released` | `released` | Collection of Movies or TV Shows released in the last 90 days. |
 
-## Config
-
-The below YAML in your config.yml will create the collections:
-
-```yaml
-libraries:
-  Movies:
-    collection_files:
-      - default: basic
-  TV Shows:
-    collection_files:
-      - default: basic
-```
-
-## Template Variables
-
-Template Variables can be used to manipulate the file in various ways to slightly change how it works without having to 
-make your own local copy.
-
-Note that the `template_variables:` section only needs to be used if you do want to actually change how the defaults 
-work. Any value not specified will use its default value if it has one if not it's just ignored.
-
-??? example "Example Template Variable Amendments (Click to Expand)"
-
-    The below is an example config.yml extract with some Template Variables added in to change how the file works.
-
-    Click the :fontawesome-solid-circle-plus: icon to learn more
-    
+{% include-markdown "./../templates/defaults_mid_both.md" replace='{"CODE_NAME": "basic"}' %}
     ```yaml
     libraries:
       Movies:
@@ -64,14 +33,7 @@ work. Any value not specified will use its default value if it has one if not it
     3.  Pin the "Newly Released" collection to the home screen of the server owner
     4.  Pin the "Newly Released" collection to the home screen of other users of the server
 
-* **File-Specific Template Variables** are variables available specifically for this Kometa Defaults File.
-
-* **Shared Template Variables** are additional variables shared across the Kometa Defaults.
-
-=== "File-Specific Template Variables"
-
-    | Variable                          | Description & Values                                                                                                                                                                                                                            |
-    | :-------------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+{% include-markdown "./../templates/defaults_variables_header.md" exclude-tags="separator" %}
     | `in_the_last_<<key>>`<sup>1</sup> | **Description:** Changes how far back the Smart Filter looks.<table class="clearTable"><tr><td>**Default:**</td></tr><tr><td>`released`</td><td>`90`</td></tr><tr><td>`episodes`</td><td>`7`</td></tr></table>**Values:** Number greater than 0 |
     | `limit_<<key>>`<sup>1</sup>       | **Description:** Changes the Smart Filter Limit of the [key's](#collection_section) collection.<br>**Default:** `limit`<br>**Values:** Number greater than 0                                                                                    |
     | `limit`                           | **Description:** Changes the Smart Filter Limit for all collections in a Defaults File.<br>**Values:** Number greater than 0                                                                                                                    |
@@ -82,8 +44,4 @@ work. Any value not specified will use its default value if it has one if not it
     1. Each default collection has a [`key`](#collection_section) that you must replace `<<key>>` with when using 
     this Template Variable. These keys are found in the table at the top of this page.
 
-{%
-  include-markdown "./../templates/defaults_variables.md"
-  end="<!--space-->"
-%}
-
+{% include-markdown "./../templates/defaults_variables.md" end="<!--space-->" %}

@@ -13,7 +13,7 @@ might be seen as controversial. You are welcome to edit this to fit your own aud
 
 **[This file has a Movie Library Counterpart.](../movie/region.md)**
 
-![](../images/region1.png)
+![](../images/region.png)
 
 ## Requirements & Recommendations
 
@@ -42,7 +42,7 @@ libraries:
 
 Below is a screenshot of the alternative Color (`color`) style which can be set via the `style` Template Variable.
 
-![](../images/region2.png)
+![](../images/region_style.png)
 
 ## Template Variables
 

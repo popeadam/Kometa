@@ -7,17 +7,11 @@ hide:
     replace='{
         "COLLECTION": "Actor",
         "CODE_NAME": "actor",
-        "DESCRIPTION": "dynamically create collections based on the most popular actors/actresses in your library"
-    }'
-    end="<!--before-image-->"
-%}
-{%
-    include-markdown "./../templates/defaults_header.md"
-    replace='{
+        "DESCRIPTION": "dynamically create collections based on the most popular actors/actresses in your library",
         "LIBRARY_TYPE": "Movie, Show",
         "SECTION_NUMBER": "140"
     }'
-    start="<!--after-image-->"
+    exclude-tags="image"
 %}
 {% include-markdown "./../templates/separator_line.md" replace='{"SEPARATOR": "Actors"}' %}
 | `<<actor_name>>`<br>**Example:** `Frank Welker` | `<<actor_name>>`<br>**Example:** `Frank Welker` | Collection of Movies/Shows the actor is top billing in.                        |

@@ -2,10 +2,15 @@
 hide:
   - toc
 ---
-# US Content Rating Collections
-
-The `content_rating_us` Default Collection File is used to dynamically create collections based on the content ratings 
-available in your library.
+{%
+    include-markdown "./../templates/defaults_header.md"
+    replace='{
+        "COLLECTION": "US Content Rating", 
+        "CODE_NAME": "content_rating_us",
+        "DESCRIPTION": "dynamically create collections based on the content ratings available in your library"
+    }'
+    end="<!--before-image-->"
+%}
 
 If you do not use the US-based rating system within Plex, this file will attempt to match the ratings in your library to
 the respective rating system.
@@ -14,45 +19,25 @@ the respective rating system.
 
 ![](../images/moviecontent_rating_us.png)
 
-## Requirements & Recommendations
-
-Supported Library Types: Movie
+{%
+    include-markdown "./../templates/defaults_header.md"
+    replace='{"LIBRARY_TYPE": "Movie"}'
+    start="<!--after-image-->"
+    end="<!--space-->"
+%}
 
 Recommendation: Set the Certification Country within your library's advanced settings to "United States".
 
-## <a id="collection_section"></a>Collections Section 110
-
-| Collection                                             | Key                                      | Description                                                                     |
-| :----------------------------------------------------- | :--------------------------------------- | :------------------------------------------------------------------------------ |
+{%
+    include-markdown "./../templates/defaults_header.md"
+    replace='{"SECTION_NUMBER": "110"}'
+    start="<!--space-->"
+%}
+{% include-markdown "./../templates/separator_line.md" replace='{"SEPARATOR": "Ratings"}' %}
 | `<<Content Rating>> Movies`<br>**Example:** `R Movies` | `<<Content Rating>>`<br>**Example:** `R` | Collection of Movies that have this Content Rating.                             |
-| `Country Collections`                                  | `separator`                              | [Separator Collection](../separators.md) to denote the Section of Collections.  |
 | `Not Rated Movies`                                     | `other`                                  | Collection of Movies that are Unrated, Not Rated or any other uncommon Ratings. |
 
-## Config
-
-The below YAML in your config.yml will create the collections:
-
-```yaml
-libraries:
-  Movies:
-    collection_files:
-      - default: content_rating_us
-```
-
-## Template Variables
-
-Template Variables can be used to manipulate the file in various ways to slightly change how it works without having to 
-make your own local copy.
-
-Note that the `template_variables:` section only needs to be used if you do want to actually change how the defaults 
-work. Any value not specified will use its default value if it has one if not it's just ignored.
-
-??? example "Example Template Variable Amendments (Click to Expand)"
-
-    The below is an example config.yml extract with some Template Variables added in to change how the file works.
-
-    Click the :fontawesome-solid-circle-plus: icon to learn more
-    
+{% include-markdown "./../templates/defaults_mid_movie.md" replace='{"CODE_NAME": "content_rating_us"}' %}
     ```yaml
     libraries:
       Movies:
@@ -70,20 +55,9 @@ work. Any value not specified will use its default value if it has one if not it
     1.  Use the blue [Separator Style](../separators.md#separator-styles)
     2.  Do not create a "Not Rated Movies" collection
     3.  Defines a collection which will be called "R", this does not need to already exist in your library
-    4.  Adds the "de/18" content rating to the "R" addon list, "de/18" must exist in your library if the "R" content 
-    rating does not
+    4.  Adds the "de/18" content rating to the "R" addon list, "de/18" must exist in your library if the "R" content rating does not
 
-* **File-Specific Template Variables** are variables available specifically for this Kometa Defaults File.
-
-* **Shared Template Variables** are additional variables shared across the Kometa Defaults.
-
-* **Shared Separator Variables** are additional variables available since this Default contains a 
-[Separator](../separators.md).
-
-=== "File-Specific Template Variables"
-
-    | Variable                      | Description & Values                                                                                                                                                                                                                                                    |
-    | :---------------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+{% include-markdown "./../templates/defaults_variables_header.md" %}
     | `addons`                      | **Description:** Overrides the [default addons dictionary](#default-values). Defines how multiple keys can be combined under a parent key. The parent key doesn't have to already exist in Plex<br>**Values:** Dictionary List of Content Ratings found in your library |
     | `append_addons`               | **Description:** Appends to the [default addons dictionary](#default-values).<br>**Values:** Dictionary List of Content Ratings found in your library                                                                                                                   |
     | `append_include`              | **Description:** Appends to the [default include list](#default-values).<br>**Values:** List of Content Ratings found in your library                                                                                                                                   |
@@ -101,15 +75,5 @@ work. Any value not specified will use its default value if it has one if not it
     1. Each default collection has a [`key`](#collection_section) that you must replace `<<key>>` with when using 
     this Template Variable. These keys are found in the table at the top of this page.
 
-{%
-  include-markdown "./../templates/defaults_variables.md"
-%}
-
-
-## Default Values
-
-Unless you customize them as described above, these collections use default lists and searches to create the collections.
-
-If you are interested in customizing the default values, you can find that information [here](#template-variables).
-
-If you are interested in seeing what those default builders are, you can find that information [here](../sources.md).
+{% include-markdown "./../templates/defaults_variables.md" %}
+{% include-markdown "./../templates/defaults_values.md" rewrite-relative-urls=false %}

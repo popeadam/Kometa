@@ -2,50 +2,19 @@
 hide:
   - toc
 ---
-# Chart Separator Collections
+{%
+    include-markdown "./../templates/defaults_header.md"
+    replace='{
+        "COLLECTION": "Chart Separator",
+        "CODE_NAME": "separator_chart",
+        "LIBRARY_TYPE": "Movie, Show",
+        "SECTION_NUMBER": "020",
+        "DESCRIPTION": "create a separator collection for Charts"
+    }'
+%}
+{% include-markdown "./../templates/separator_line.md" replace='{"SEPARATOR": "Chart"}' %}
 
-The `separator_chart` Default Collection File is used to create a separator collection for Charts.
-
-![](../images/chartseparator.png)
-
-## Requirements & Recommendations
-
-Supported Library Types: Movie, Show
-
-## <a id="collection_section"></a>Collections Section 020
-
-| Collection          | Key         | Description                                                                    |
-|:--------------------|:------------|:-------------------------------------------------------------------------------|
-| `Chart Collections` | `separator` | [Separator Collection](../separators.md) to denote the Section of Collections. |
-
-## Config
-
-The below YAML in your config.yml will create the collections:
-
-```yaml
-libraries:
-  Movies:
-    collection_files:
-      - default: separator_chart
-  TV Shows:
-    collection_files:
-      - default: separator_chart
-```
-
-## Template Variables
-
-Template Variables can be used to manipulate the file in various ways to slightly change how it works without having to 
-make your own local copy.
-
-Note that the `template_variables:` section only needs to be used if you do want to actually change how the defaults 
-work. Any value not specified will use its default value if it has one if not it's just ignored.
-
-??? example "Example Template Variable Amendments (Click to Expand)"
-
-    The below is an example config.yml extract with some Template Variables added in to change how the file works.
-
-    Click the :fontawesome-solid-circle-plus: icon to learn more
-
+{% include-markdown "./../templates/defaults_mid_both.md" replace='{"CODE_NAME": "separator_chart"}' %}
     ```yaml
     libraries:
       Movies:
@@ -57,11 +26,5 @@ work. Any value not specified will use its default value if it has one if not it
 
     1.  Use the purple [Separator Style](../separators.md#separator-styles)
 
-* **Shared Separator Variables** are additional variables available since this Default contains a 
-[Separator](../separators.md).
-
-{%
-  include-markdown "./../templates/defaults_variables.md"
-  start="<!--space-->"
-%}
-
+{% include-markdown "./../templates/defaults_variables_header.md" only-include="separator" %}
+{% include-markdown "./../templates/defaults_variables.md" start="<!--space-->" %}

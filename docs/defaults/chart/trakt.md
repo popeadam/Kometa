@@ -2,56 +2,24 @@
 hide:
   - toc
 ---
-# Trakt Charts Collections
-
-The `trakt` Default Collection File is used to create collections based on Trakt Charts.
-
-![](../images/trakt.png)
-
-## Requirements & Recommendations
-
-Supported Library Types: Movie, Show
-
-Requirements: [Trakt Authentication](../../config/trakt.md)
-
-## <a id="collection_section"></a>Collections Section 020
-
-| Collection          | Key           | Description                                             |
-| :------------------ | :------------ | :------------------------------------------------------ |
+{%
+    include-markdown "./../templates/defaults_header.md"
+    replace='{
+        "COLLECTION": "Trakt Charts", 
+        "CODE_NAME": "trakt",
+        "LIBRARY_TYPE": "Movie, Show", 
+        "DESCRIPTION": "create collections based on Trakt charts",
+        "SECTION_NUMBER": "020"
+    }'
+    replace-tags='{"space": "Requirements: [Trakt Authentication](../../config/trakt.md)."}'
+%}
 | `Trakt Collected`   | `collected`   | Collection of the Most Collected Movies/Shows on Trakt. |
 | `Trakt Popular`     | `popular`     | Collection of the Most Popular Movies/Shows on Trakt.   |
 | `Trakt Recommended` | `recommended` | Collection of Recommended Movies/Shows on Trakt.        |
 | `Trakt Trending`    | `trending`    | Collection of Trending Movies/Shows on Trakt.           |
 | `Trakt Watched`     | `watched`     | Collection of the Most Watched Movies/Shows on Trakt.   |
 
-## Config
-
-The below YAML in your config.yml will create the collections:
-
-```yaml
-libraries:
-  Movies:
-    collection_files:
-      - default: trakt
-  TV Shows:
-    collection_files:
-      - default: trakt
-```
-
-## Template Variables
-
-Template Variables can be used to manipulate the file in various ways to slightly change how it works without having to 
-make your own local copy.
-
-Note that the `template_variables:` section only needs to be used if you do want to actually change how the defaults 
-work. Any value not specified will use its default value if it has one if not it's just ignored.
-
-??? example "Example Template Variable Amendments (Click to Expand)"
-
-    The below is an example config.yml extract with some Template Variables added in to change how the file works.
-
-    Click the :fontawesome-solid-circle-plus: icon to learn more
-    
+{% include-markdown "./../templates/defaults_mid_both.md" replace='{"CODE_NAME": "trakt"}' %}
     ```yaml
     libraries:
       Movies:
@@ -73,14 +41,7 @@ work. Any value not specified will use its default value if it has one if not it
     5.  Pin the "Trakt Popular" collection to the home screen of the server owner
     6.  Pin the "Trakt Popular" collection to the home screen of other users of the server
 
-* **File-Specific Template Variables** are variables available specifically for this Kometa Defaults File.
-
-* **Shared Template Variables** are additional variables shared across the Kometa Defaults.
-
-=== "File-Specific Template Variables"
-
-    | Variable                               | Description & Values                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-    | :------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+{% include-markdown "./../templates/defaults_variables_header.md" exclude-tags="separator" %}
     | `collection_order_<<key>>`<sup>1</sup> | **Description:** Changes the Collection Order of the [key's](#collection_section) collection.<br>**Default:** `collection_order`<br>**Values:**<table class="clearTable"><tr><td>`release`</td><td>Order Collection by Release Dates</td></tr><tr><td>`alpha`</td><td>Order Collection Alphabetically</td></tr><tr><td>`custom`</td><td>Order Collection Via the Builder Order</td></tr><tr><td>[Any `plex_search` Sort Option](../../files/builders/plex.md#sort-options)</td><td>Order Collection by any `plex_search` Sort Option</td></tr></table> |
     | `collection_order`                     | **Description:** Changes the Collection Order for all collections in a Defaults File.<br>**Default:** `custom`<br>**Values:**<table class="clearTable"><tr><td>`release`</td><td>Order Collection by Release Dates</td></tr><tr><td>`alpha`</td><td>Order Collection Alphabetically</td></tr><tr><td>`custom`</td><td>Order Collection Via the Builder Order</td></tr><tr><td>[Any `plex_search` Sort Option](../../files/builders/plex.md#sort-options)</td><td>Order Collection by any `plex_search` Sort Option</td></tr></table>                   |
     | `limit_<<key>>`<sup>1</sup>            | **Description:** Changes the Builder Limit of the [key's](#collection_section) collection.<br>**Default:** `limit`<br>**Values:** Number Greater than 0                                                                                                                                                                                                                                                                                                                                                                                                |
@@ -91,8 +52,4 @@ work. Any value not specified will use its default value if it has one if not it
 
     1. Each default collection has a `key` that when calling to effect a specific collection you must replace `<<key>>` with when calling.
 
-{%
-  include-markdown "./../templates/defaults_variables.md"
-  end="<!--space-->"
-%}
-
+{% include-markdown "./../templates/defaults_variables.md" end="<!--space-->" %}

@@ -2,58 +2,36 @@
 hide:
   - toc
 ---
-# Continent Collections
-
-The `continent` Default Collection File is used to dynamically create collections based on the countries within your library. The collection aims to be inclusive, with all 230 countries incorporated into seven continents.
+{%
+    include-markdown "./../templates/defaults_header.md"
+    replace='{
+        "COLLECTION": "Continent", 
+        "CODE_NAME": "continent",
+        "DESCRIPTION": "dynamically create collections based on the countries within your library. The collection aims to be inclusive, with all 230 countries incorporated into seven continents"
+    }'
+    end="<!--before-image-->"
+%}
 
 **[This file has a Movie Library Counterpart.](../movie/continent.md).**
 
-![](../images/continent1.png)
+{%
+    include-markdown "./../templates/defaults_header.md"
+    replace='{
+        "CODE_NAME": "continent",
+        "LIBRARY_TYPE": "Show",
+        "SECTION_NUMBER": "082"
+    }'
+    start="<!--before-image-->"
+%}
+{% include-markdown "./../templates/separator_line.md" replace='{"SEPARATOR": "Continent"}' %}
+| `<<Continent>>`<br>**Example:** `South America` | `<<2 digit ISO 3166-1 code>>`<br>**Example:** `br` | Collection of TV Shows that have this Continent.              |
+| `Other Continents`                              | `other`                                            | Collection of TV Shows that are in other uncommon Continents. |
 
-## Requirements & Recommendations
-
-Supported Library Types: Show
-
-## <a id="collection_section"></a>Collections Section 082
-
-| Collection                                      | Key                                                | Description                                                                    |
-| :---------------------------------------------- | :------------------------------------------------- | :----------------------------------------------------------------------------- |
-| `<<Continent>>`<br>**Example:** `South America` | `<<2 digit ISO 3166-1 code>>`<br>**Example:** `br` | Collection of TV Shows that have this Continent.                               |
-| `Continent Collections`                         | `separator`                                        | [Separator Collection](../separators.md) to denote the Section of Collections. |
-| `Other Continents`                              | `other`                                            | Collection of TV Shows that are in other uncommon Continents.                  |
-
-## Config
-
-The below YAML in your config.yml will create the collections:
-
-```yaml
-libraries:
-  TV Shows:
-    collection_files:
-      - default: continent
-```
-
-## Color Style
-
-Below is a screenshot of the alternative Color (`color`) style which can be set via the `style` Template Variable.
-
-![](../images/continent2.png)
-
-## Template Variables
-
-Template Variables can be used to manipulate the file in various ways to slightly change how it works without having to make your own local copy.
-
-Note that the `template_variables:` section only needs to be used if you do want to actually change how the Defaults work. Any value not specified will use its default value if it has one if not it's just ignored.
-
-??? example "Example Template Variable Amendments (Click to Expand)"
-
-        The below is an example config.yml extract with some Template Variables added in to change how the file works.
-    
-        Click the :fontawesome-solid-circle-plus: icon to learn more
-        
+{% include-markdown "./../templates/location_style.md" replace='{"CODE_NAME": "continent"}' %}
+{% include-markdown "./../templates/defaults_mid_show.md" replace='{"CODE_NAME": "continent"}' %}
         ```yaml
         libraries:
-          Movies:
+          TV Shows:
             collection_files:
               - default: continent
                 template_variables:
@@ -70,24 +48,7 @@ Note that the `template_variables:` section only needs to be used if you do want
         3.  Set the [Color Style](#color-style)
         4.  Exclude "Europe" from the list of collections that are created
 
-
-* **File-Specific Template Variables** are variables available specifically for this Kometa Defaults File.
-
-* **Shared Template Variables** are additional variables shared across the Kometa Defaults.
-
-* **Shared Separator Variables** are additional variables available since this Default contains a 
-[Separator](../separators.md).
-
-=== "File-Specific Template Variables"
-
-    The below Template Variables are available specifically for this Kometa Defaults File.
-
-    Be sure to also check out the "Shared Template Variables" tab for additional variables.
-
-    This file contains a [Separator](../separators.md) so all [Shared Separator Variables](../separators.md#shared-separator-variables) are available as well.
-
-    | Variable                        | Description & Values                                                                                                                                                                                                                                                                                          |
-    | :------------------------------ | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+{% include-markdown "./../templates/defaults_variables_header.md" %}
     | `addons`                        | **Description:** Defines how multiple keys can be combined under a parent key. The parent key doesn't have to already exist in Plex<br>**Values:** Dictionary List of [2 digit ISO 3166-1 codes](https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes)                                                |
     | `append_addons`                 | **Description:** Appends to the [default addons dictionary](#default-values).<br>**Values:** Dictionary List of [2 digit ISO 3166-1 codes](https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes)                                                                                                      |
     | `append_include`                | **Description:** Appends to the [default include list](#default-values).<br>**Values:** List of [2 digit ISO 3166-1 codes](https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes)                                                                                                                      |
@@ -108,14 +69,5 @@ Note that the `template_variables:` section only needs to be used if you do want
 
     1. Each default collection has a `key` that when calling to effect a specific collection you must replace `<<key>>` with when calling.
 
-{%
-  include-markdown "./../templates/defaults_variables.md"
-%}
-
-## Default Values
-
-Unless you customize them as described above, these collections use default lists and searches to create the collections.
-
-If you are interested in customizing the default values, you can find that information [here](#template-variables).
-
-If you are interested in seeing what those default builders are, you can find that information [here](../sources.md).
+{% include-markdown "./../templates/defaults_variables.md" %}
+{% include-markdown "./../templates/defaults_values.md" rewrite-relative-urls=false %}

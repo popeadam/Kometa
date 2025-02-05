@@ -53,9 +53,9 @@ Requirements:
               collection_order: release
     ```
 
-{% include-markdown "./../templates/defaults_variables_header.md" start="<!--space-->" end="<!--space2-->" %}
+{% include-markdown "./../templates/defaults_variables_header.md" end="<!--file-->" %}
 {% include-markdown "./../templates/defaults_no_shared_variables.md" %}
-{% include-markdown "./../templates/defaults_variables_header.md" start="<!--space2-->" %}
+{% include-markdown "./../templates/defaults_variables_header.md" start="<!--file-header-->" %}
     | `collection_order`       | **Description:** Changes the Collection Order for all collections in this file.<br>**Default:** `alpha`<br>**Values:**<table class="clearTable"><tr><td>`release`</td><td>Order Collection by Release Dates</td></tr><tr><td>`alpha`</td><td>Order Collection Alphabetically</td></tr><tr><td>`custom`</td><td>Order Collection Via the Builder Order</td></tr><tr><td>[Any `plex_search` Sort Option](../../files/builders/plex.md#sort-options)</td><td>Order Collection by any `plex_search` Sort Option</td></tr></table> |
     | `exclude_prefix`         | **Description:** Overrides the default exclude_prefix list. Exclude Collections with one of these prefixes from being considered for collectionless.<br>**Default:** default exclude_prefix list<br>**Values:** List of Prefixes                                                                                                                                                                                                                                                                                              |  |
     | `exclude`                | **Description:** Exclude these Collections from being considered for collectionless.<br>**Values:** List of Collections                                                                                                                                                                                                                                                                                                                                                                                                       |
