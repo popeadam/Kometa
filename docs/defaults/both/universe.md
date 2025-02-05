@@ -2,66 +2,34 @@
 hide:
   - toc
 ---
-# Universe Collections
+{%
+    include-markdown "./../templates/defaults_header.md"
+    replace='{
+        "COLLECTION": "Universe", 
+        "CODE_NAME": "universe",
+        "LIBRARY_TYPE": "Movie, Show", 
+        "SECTION_NUMBER": "040", 
+        "DESCRIPTION": "create collections based on popular Movie universes (such as the Marvel Cinematic Universe or Wizarding World)"
+    }'
+%}
+{% include-markdown "./../templates/separator_line.md" replace='{"SEPARATOR": "Universe"}' %}
+| `Alien / Predator`           | `avp`       | Collection of Movies in the Alien / Predator Universe             |
+| `Arrowverse`                 | `arrow`     | Collection of Movies in the The Arrow Universe                    |
+| `DC Animated Universe`       | `dca`       | Collection of Movies in the DC Animated Universe                  |
+| `DC Extended Universe`       | `dcu`       | Collection of Movies in the DC Extended Universe                  |
+| `Fast & Furious`             | `fast`      | Collection of Movies in the Fast & Furious Universe               |
+| `In Association with Marvel` | `marvel`    | Collection of Movies in the Marvel Universe (but not part of MCU) |
+| `Marvel Cinematic Universe`  | `mcu`       | Collection of Movies in the Marvel Cinematic Universe             |
+| `Middle Earth`               | `middle`    | Collection of Movies in the Middle Earth Universe                 |
+| `Rocky / Creed`              | `rocky`     | Collection of Movies in the Rocky / Creed Universe                |
+| `Star Trek`                  | `trek`      | Collection of Movies in the Star Trek Universe                    |
+| `Star Wars Universe`         | `star`      | Collection of Movies in the Star Wars Universe                    |
+| `The Mummy Universe`         | `mummy`     | Collection of Movies in the The Mummy Universe                    |
+| `View Askewverse`            | `askew`     | Collection of Movies in the The View Askew Universe               |
+| `Wizarding World`            | `wizard`    | Collection of Movies in the Wizarding World Universe              |
+| `X-Men Universe`             | `xmen`      | Collection of Movies in the X-Men Universe                        |
 
-The `universe` Default Collection File is used to create collections based on popular Movie universes (such as the 
-Marvel Cinematic Universe or Wizarding World).
-
-![](../images/universe.png)
-
-## Requirements & Recommendations
-
-Supported Library Types: Movie & Show
-
-## <a id="collection_section"></a>Collections Section 040
-
-| Collection                   | Key         | Description                                                                    |
-| :--------------------------- | :---------- | :----------------------------------------------------------------------------- |
-| `Alien / Predator`           | `avp`       | Collection of Movies in the Alien / Predator Universe                          |
-| `Arrowverse`                 | `arrow`     | Collection of Movies in the The Arrow Universe                                 |
-| `DC Animated Universe`       | `dca`       | Collection of Movies in the DC Animated Universe                               |
-| `DC Extended Universe`       | `dcu`       | Collection of Movies in the DC Extended Universe                               |
-| `Fast & Furious`             | `fast`      | Collection of Movies in the Fast & Furious Universe                            |
-| `In Association with Marvel` | `marvel`    | Collection of Movies in the Marvel Universe (but not part of MCU)              |
-| `Marvel Cinematic Universe`  | `mcu`       | Collection of Movies in the Marvel Cinematic Universe                          |
-| `Middle Earth`               | `middle`    | Collection of Movies in the Middle Earth Universe                              |
-| `Rocky / Creed`              | `rocky`     | Collection of Movies in the Rocky / Creed Universe                             |
-| `Star Trek`                  | `trek`      | Collection of Movies in the Star Trek Universe                                 |
-| `Star Wars Universe`         | `star`      | Collection of Movies in the Star Wars Universe                                 |
-| `The Mummy Universe`         | `mummy`     | Collection of Movies in the The Mummy Universe                                 |
-| `Universe Collections`       | `separator` | [Separator Collection](../separators.md) to denote the Section of Collections. |
-| `View Askewverse`            | `askew`     | Collection of Movies in the The View Askew Universe                            |
-| `Wizarding World`            | `wizard`    | Collection of Movies in the Wizarding World Universe                           |
-| `X-Men Universe`             | `xmen`      | Collection of Movies in the X-Men Universe                                     |
-
-## Config
-
-The below YAML in your config.yml will create the collections:
-
-```yaml
-libraries:
-  Movies:
-    collection_files:
-      - default: universe
-  TV Shows:
-    collection_files:
-      - default: universe
-```
-
-## Template Variables
-
-Template Variables can be used to manipulate the file in various ways to slightly change how it works without having to 
-make your own local copy.
-
-Note that the `template_variables:` section only needs to be used if you do want to actually change how the defaults 
-work. Any value not specified will use its default value if it has one if not it's just ignored.
-
-??? example "Example Template Variable Amendments (Click to Expand)"
-
-    The below is an example config.yml extract with some Template Variables added in to change how the file works.
-
-    Click the :fontawesome-solid-circle-plus: icon to learn more
-    
+{% include-markdown "./../templates/defaults_mid_both.md" replace='{"CODE_NAME": "universe"}' %}
     ```yaml
     libraries:
       Movies:
@@ -82,17 +50,7 @@ work. Any value not specified will use its default value if it has one if not it
     4.  Create a new universe called "MonsterVerse", the key for this universe will be "monster"
     5.  Add a trakt list to the "monster" key
 
-* **File-Specific Template Variables** are variables available specifically for this Kometa Defaults File.
-
-* **Shared Template Variables** are additional variables shared across the Kometa Defaults.
-
-* **Shared Separator Variables** are additional variables available since this Default contains a 
-[Separator](../separators.md).
-
-=== "File-Specific Template Variables"
-
-    | Variable                               | Description & Values                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
-    | :------------------------------------- | :----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+{% include-markdown "./../templates/defaults_variables_header.md" %}
     | `append_data`                          | **Description:** Appends to the [default data dictionary](#default-values).<br>**Values:** Dictionary List of keys/names                                                                                                                                                                                                                                                                                                                                                                                                                               |
     | `collection_order_<<key>>`<sup>1</sup> | **Description:** Changes the Collection Order of the [key's](#collection_section) collection.<br>**Default:** `collection_order`<br>**Values:**<table class="clearTable"><tr><td>`release`</td><td>Order Collection by Release Dates</td></tr><tr><td>`alpha`</td><td>Order Collection Alphabetically</td></tr><tr><td>`custom`</td><td>Order Collection Via the Builder Order</td></tr><tr><td>[Any `plex_search` Sort Option](../../files/builders/plex.md#sort-options)</td><td>Order Collection by any `plex_search` Sort Option</td></tr></table> |
     | `collection_order`                     | **Description:** Changes the Collection Order for all collections in a Defaults File.<br>**Default:** `custom`<br>**Values:**<table class="clearTable"><tr><td>`release`</td><td>Order Collection by Release Dates</td></tr><tr><td>`alpha`</td><td>Order Collection Alphabetically</td></tr><tr><td>`custom`</td><td>Order Collection Via the Builder Order</td></tr><tr><td>[Any `plex_search` Sort Option](../../files/builders/plex.md#sort-options)</td><td>Order Collection by any `plex_search` Sort Option</td></tr></table>                   |
@@ -110,16 +68,5 @@ work. Any value not specified will use its default value if it has one if not it
     1. Each default collection has a [`key`](#collection_section) that you must replace `<<key>>` with when using 
     this Template Variable. These keys are found in the table at the top of this page.
 
-{%
-  include-markdown "./../templates/defaults_variables.md"
-%}
-
-
-
-## Default Values
-
-Unless you customize them as described above, these collections use default lists and searches to create the collections.
-
-If you are interested in customizing the default values, you can find that information [here](#template-variables).
-
-If you are interested in seeing what those default builders are, you can find that information [here](../sources.md).
+{% include-markdown "./../templates/defaults_variables.md" %}
+{% include-markdown "./../templates/defaults_values.md" rewrite-relative-urls=false %}

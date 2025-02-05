@@ -2,53 +2,22 @@
 hide:
   - toc
 ---
-# Anilist Charts Collections
-
-The `anilist` Default Collection File is used to create collections based on Anilist charts.
-
-![](../images/anilist.png)
-
-## Requirements & Recommendations
-
-Supported Library Types: Movie, Show
-
-## <a id="collection_section"></a>Collections Section 020
-
-| Collection          | Key        | Description                                          |
-| :------------------ | :--------- | :--------------------------------------------------- |
+{%
+    include-markdown "./../templates/defaults_header.md"
+    replace='{
+        "COLLECTION": "Anilist Charts", 
+        "CODE_NAME": "anilist",
+        "LIBRARY_TYPE": "Movie, Show", 
+        "SECTION_NUMBER": "020", 
+        "DESCRIPTION": "create collections based on Anilist charts"
+    }'
+%}
 | `AniList Popular`   | `popular`  | Collection of the most Popular Anime on AniList.     |
 | `AniList Season`    | `season`   | Collection of the Current Season's Anime on AniList. |
 | `AniList Top Rated` | `top`      | Collection of the Top Rated Anime on AniList.        |
 | `AniList Trending`  | `trending` | Collection of the Trending Anime on AniList.         |
 
-## Config
-
-The below YAML in your config.yml will create the collections:
-
-```yaml
-libraries:
-  Movies:
-    collection_files:
-      - default: anilist
-  TV Shows:
-    collection_files:
-      - default: anilist
-```
-
-## Template Variables
-
-Template Variables can be used to manipulate the file in various ways to slightly change how it works without having to 
-make your own local copy.
-
-Note that the `template_variables:` section only needs to be used if you do want to actually change how the defaults 
-work. Any value not specified will use its default value if it has one if not it's just ignored.
-
-??? example "Example Template Variable Amendments (Click to Expand)"
-
-    The below is an example config.yml extract with some Template Variables added in to change how the file works.
-
-    Click the :fontawesome-solid-circle-plus: icon to learn more
-    
+{% include-markdown "./../templates/defaults_mid_both.md" replace='{"CODE_NAME": "anilist"}' %}    
     ```yaml
     libraries:
       Movies:
@@ -72,6 +41,7 @@ work. Any value not specified will use its default value if it has one if not it
     6.  Pin the "AniList Popular" collection to the home screen of the server owner
     7.  Pin the "AniList Popular" collection to the home screen of other users of the server
 
+end="<!--space-->"
 * **File-Specific Template Variables** are variables available specifically for this Kometa Defaults File.
 
 * **Shared Template Variables** are additional variables shared across the Kometa Defaults.

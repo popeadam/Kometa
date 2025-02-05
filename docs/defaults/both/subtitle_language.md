@@ -2,53 +2,21 @@
 hide:
   - toc
 ---
-# Subtitle Language Collections
-
-The `subtitle_language` Default Collection File is used to dynamically create collections based on the subtitle 
-languages available in your library.
-
-![](../images/subtitle_language.png)
-
-## Requirements & Recommendations
-
-Supported Library Types: Movie, Show
-
-## <a id="collection_section"></a>Collections Section 095
-
-| Collection                                               | Key                                                                                      | Description                                                                    |
-| :------------------------------------------------------- | :--------------------------------------------------------------------------------------- | :----------------------------------------------------------------------------- |
+{%
+    include-markdown "./../templates/defaults_header.md"
+    replace='{
+        "COLLECTION": "Subtitle Language", 
+        "CODE_NAME": "subtitle_language",
+        "LIBRARY_TYPE": "Movie, Show", 
+        "SECTION_NUMBER": "095", 
+        "DESCRIPTION": "dynamically create collections based on the subtitle languages available in your library"
+    }'
+%}
+{% include-markdown "./../templates/separator_line.md" replace='{"SEPARATOR": "Subtitle Language"}' %}
 | `<<Subtitle Language>> Audio`<br>**Example:** `Japanese` | `<<ISO 639-1 Code>>`<br>**Example:** `ja` <br>`<<ISO 639-2 Code>>`<br>**Example:** `myn` | Collection of Movies/Shows that have this Subtitle Language.                   |
 | `Other Subtitles`                                        | `other`                                                                                  | Collection of Movies/Shows that are less common Languages.                     |
-| `Subtitle Language Collections`                          | `separator`                                                                              | [Separator Collection](../separators.md) to denote the Section of Collections. |
 
-## Config
-
-The below YAML in your config.yml will create the collections:
-
-```yaml
-libraries:
-  Movies:
-    collection_files:
-      - default: subtitle_language
-  TV Shows:
-    collection_files:
-      - default: subtitle_language
-```
-
-## Template Variables
-
-Template Variables can be used to manipulate the file in various ways to slightly change how it works without having to 
-make your own local copy.
-
-Note that the `template_variables:` section only needs to be used if you do want to actually change how the defaults 
-work. Any value not specified will use its default value if it has one if not it's just ignored.
-
-??? example "Example Template Variable Amendments (Click to Expand)"
-
-    The below is an example config.yml extract with some Template Variables added in to change how the file works.
-
-    Click the :fontawesome-solid-circle-plus: icon to learn more
-    
+{% include-markdown "./../templates/defaults_mid_both.md" replace='{"CODE_NAME": "subtitle_language"}' %}
     ```yaml
     libraries:
       Movies:
@@ -62,21 +30,11 @@ work. Any value not specified will use its default value if it has one if not it
               sort_by: title.asc
     ```
 
-    1.  Do not create an "Other Audio" collection
-    2.  Do not create an "Audio Language Collections" separator
-    3.  Exclude "French" from having an Audio Collection
+    1.  Do not create an "Other Subtitles" collection
+    2.  Do not create an "Subtitle Language Collections" separator
+    3.  Exclude "French" from having an Subtitle Collection
 
-* **File-Specific Template Variables** are variables available specifically for this Kometa Defaults File.
-
-* **Shared Template Variables** are additional variables shared across the Kometa Defaults.
-
-* **Shared Separator Variables** are additional variables available since this Default contains a 
-[Separator](../separators.md).
-
-=== "File-Specific Template Variables"
-
-    | Variable                      | Description & Values                                                                                                                                                                                                                                                               |
-    | :---------------------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+{% include-markdown "./../templates/defaults_variables_header.md" %}
     | `append_include`              | **Description:** Appends to the [default include list](#default-values)<br>**Values:** List of [ISO 639-1 codes](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)<br>**Values:** List of [ISO 639-2 codes](https://en.wikipedia.org/wiki/List_of_ISO_639-2_codes)            |
     | `exclude`                     | **Description:** Exclude these Audio Languages from creating a Dynamic Collection.<br>**Values:** List of [ISO 639-1 codes](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)<br>**Values:** List of [ISO 639-2 codes](https://en.wikipedia.org/wiki/List_of_ISO_639-2_codes) |
     | `include`                     | **Description:** Overrides the [default include list](#default-values)<br>**Values:** List of [ISO 639-1 codes](https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes)<br>**Values:** List of [ISO 639-2 codes](https://en.wikipedia.org/wiki/List_of_ISO_639-2_codes)             |
@@ -92,14 +50,5 @@ work. Any value not specified will use its default value if it has one if not it
     1. Each default collection has a [`key`](#collection_section) that you must replace `<<key>>` with when using 
     this Template Variable. These keys are found in the table at the top of this page.
 
-{%
-  include-markdown "./../templates/defaults_variables.md"
-%}
-    
-## Default Values
-
-Unless you customize them as described above, these collections use default lists and searches to create the collections.
-
-If you are interested in customizing the default values, you can find that information [here](#template-variables).
-
-If you are interested in seeing what those default builders are, you can find that information [here](../sources.md).
+{% include-markdown "./../templates/defaults_variables.md" %}
+{% include-markdown "./../templates/defaults_values.md" rewrite-relative-urls=false %}

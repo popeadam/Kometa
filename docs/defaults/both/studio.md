@@ -2,55 +2,31 @@
 hide:
   - toc
 ---
-# Studio Collections
+{%
+    include-markdown "./../templates/defaults_header.md"
+    replace='{
+        "COLLECTION": "Studio", 
+        "CODE_NAME": "studio",
+        "DESCRIPTION": "dynamically create collections based on the studios available in your library"
+    }'
+    end="<!--before-image-->"
+%}
 
-The `studio` Default Collection File is used to dynamically create collections based on the studios available in your 
-library.
+This file also merges similarly named studios (such as "20th Century Fox" and "20th Century Animation") into one ("20th Century Studios")
 
-This file also merges similarly named studios (such as "20th Century Fox" and "20th Century Animation") into one ("20th 
-Century Studios")
+{%
+    include-markdown "./../templates/defaults_header.md"
+    replace='{
+        "CODE_NAME": "studio",
+        "LIBRARY_TYPE": "Movie, Show", 
+        "SECTION_NUMBER": "070"
+    }'
+    start="<!--before-image-->"
+%}
+{% include-markdown "./../templates/separator_line.md" replace='{"SEPARATOR": "Studio"}' %}
+| `<<Studio>>`<br>**Example:** `Blumhouse Productions` | `<<Studio>>`<br>**Example:** `Blumhouse Productions` | Collection of Movies/Shows that have this Studio. |
 
-![](../images/studio.png)
-
-## Requirements & Recommendations
-
-Supported Library Types: Movie, Show
-
-## <a id="collection_section"></a>Collections Section 070
-
-| Collection                                           | Key                                                  | Description                                                                    |
-| :--------------------------------------------------- | :--------------------------------------------------- | :----------------------------------------------------------------------------- |
-| `<<Studio>>`<br>**Example:** `Blumhouse Productions` | `<<Studio>>`<br>**Example:** `Blumhouse Productions` | Collection of Movies/Shows that have this Studio.                              |
-| `Studio Collections`                                 | `separator`                                          | [Separator Collection](../separators.md) to denote the Section of Collections. |
-
-## Config
-
-The below YAML in your config.yml will create the collections:
-
-```yaml
-libraries:
-  Movies:
-    collection_files:
-      - default: studio
-  TV Shows:
-    collection_files:
-      - default: studio
-```
-
-## Template Variables
-
-Template Variables can be used to manipulate the file in various ways to slightly change how it works without having to 
-make your own local copy.
-
-Note that the `template_variables:` section only needs to be used if you do want to actually change how the defaults 
-work. Any value not specified will use its default value if it has one if not it's just ignored.
-
-??? example "Example Template Variable Amendments (Click to Expand)"
-
-    The below is an example config.yml extract with some Template Variables added in to change how the file works.
-
-    Click the :fontawesome-solid-circle-plus: icon to learn more
-    
+{% include-markdown "./../templates/defaults_mid_both.md" replace='{"CODE_NAME": "studio"}' %}
     ```yaml
     libraries:
       Movies:
@@ -68,17 +44,7 @@ work. Any value not specified will use its default value if it has one if not it
     2.  Show these collections and their items within the "Library" tab
     3.  Use the gray [Separator Style](../separators.md#separator-styles)
 
-* **File-Specific Template Variables** are variables available specifically for this Kometa Defaults File.
-
-* **Shared Template Variables** are additional variables shared across the Kometa Defaults.
-
-* **Shared Separator Variables** are additional variables available since this Default contains a 
-[Separator](../separators.md).
-
-=== "File-Specific Template Variables"
-
-    | Variable                      | Description & Values                                                                                                                                                                                                                                            |
-    | :---------------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+{% include-markdown "./../templates/defaults_variables_header.md" %}
     | `addons`                      | **Description:** Overrides the [default addons dictionary](#default-values). Defines how multiple keys can be combined under a parent key. The parent key doesn't have to already exist in Plex<br>**Values:** Dictionary List of Studios found in your library |
     | `append_addons`               | **Description:** Appends to the [default addons dictionary](#default-values).<br>**Values:** Dictionary List of Studios found in your library                                                                                                                   |
     | `append_include`              | **Description:** Appends to the [default include list](#default-values).<br>**Values:** List of Studios found in your library                                                                                                                                   |
@@ -96,15 +62,5 @@ work. Any value not specified will use its default value if it has one if not it
     1. Each default collection has a [`key`](#collection_section) that you must replace `<<key>>` with when using 
     this Template Variable. These keys are found in the table at the top of this page.
 
-{%
-  include-markdown "./../templates/defaults_variables.md"
-%}
-
-
-## Default Values
-
-Unless you customize them as described above, these collections use default lists and searches to create the collections.
-
-If you are interested in customizing the default values, you can find that information [here](#template-variables).
-
-If you are interested in seeing what those default builders are, you can find that information [here](../sources.md).
+{% include-markdown "./../templates/defaults_variables.md" %}
+{% include-markdown "./../templates/defaults_values.md" rewrite-relative-urls=false %}

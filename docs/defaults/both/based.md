@@ -9,7 +9,7 @@ hide:
         "CODE_NAME": "based",
         "LIBRARY_TYPE": "Movie, Show", 
         "SECTION_NUMBER": "085", 
-        "DESCRIPTION": "create collections with items that are based on or inspired by various media outlets (such as Books or Video Games)."
+        "DESCRIPTION": "create collections with items that are based on or inspired by various media outlets (such as Books or Video Games)"
     }'
 %}
 {% include-markdown "./../templates/separator_line.md" replace='{"SEPARATOR": "Based on..."}' %}

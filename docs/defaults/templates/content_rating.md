@@ -9,7 +9,7 @@
     end="<!--space-->"
 %}
 <!--rec-start-->
-Recommendation: Set the Certification Country within your library's advanced settings to "SHORT_NAME".
+Recommendation: Set the Certification Country within your library's advanced settings to "PLEX_NAME".
 <!--rec-end-->
 {%
     include-markdown "./defaults_header.md"
@@ -17,7 +17,7 @@ Recommendation: Set the Certification Country within your library's advanced set
     start="<!--space-->"
 %}
 {% include-markdown "./separator_line.md" replace='{"SEPARATOR": "Ratings"}' %}
-| `<<Content Rating>> Movies/Shows`<br>**Example:** `EXAMPLE_NAME Movies` | `<<Content Rating>>`<br>**Example:** `EXAMPLE1` | Collection of Movies/Shows that have this Content Rating.                             |
+| `<<Content Rating>> Movies/Shows`<br>**Example:** `EXAMPLE_NAME` | `<<Content Rating>>`<br>**Example:** `EXAMPLE1` | Collection of Movies/Shows that have this Content Rating.                             |
 | `Not Rated Movies/Shows`                                           | `other`                                        | Collection of Movies/Shows that are Unrated, Not Rated or any other uncommon Ratings. |
 
 {% include-markdown "./defaults_mid_both.md" replace='{"CODE_NAME": "CODE_NAME"}' %}

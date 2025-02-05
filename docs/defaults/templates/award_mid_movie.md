@@ -2,5 +2,6 @@
 {% include-markdown "./defaults_mid_movie.md" replace='{"CODE_NAME": "CODE_NAME"}' %}
 {% include-markdown "./award_example.md" %}
 {% include-markdown "./defaults_variables_header.md" end="<!--space-->" %}
-{% include-markdown "./award_variables.md" %}
+{% include-markdown "./defaults_variables_header.md" start="<!--space2-->" %}
+    {% include-markdown "./award_variables.md" %}
 {% include-markdown "./defaults_variables.md" end="<!--space-->" %}

@@ -43,8 +43,7 @@ hide:
     2.  Create 20 collections maximum
     3.  use the [diiivoy Color Style](#poster-styles)
     4.  Do not create an "Actors Collections" separator
-    5.  There are two Richard Brooks, so use the 2nd 
-    [Richard Brooks](https://www.themoviedb.org/search?query=Richard%20Brooks) found on TMDb
+    5.  There are two Richard Brooks, so use the 2nd [Richard Brooks](https://www.themoviedb.org/search?query=Richard%20Brooks) found on TMDb
 
 {% include-markdown "./../templates/defaults_variables_header.md" %}
     | `data`                                   | **Description:** Replaces the `data` dynamic collection value.<table class="clearTable"><tr><th>Attribute</th><th>Description & Values</th></tr><tr><td><code>depth</code></td><td>Controls the depth within the casting credits to search for common actors<br><strong>Default:</strong> 5<br><strong>Values:</strong> Number greater than 0</td></tr><tr><td><code>limit</code></td><td>Controls the maximum number of collections to create<br><strong>Default:</strong> 25<br><strong>Values:</strong> Number greater than 0</td></tr></table> |
