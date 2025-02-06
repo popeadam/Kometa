@@ -8,7 +8,7 @@ jobs:
 
   tag-cleanup:
     runs-on: ubuntu-latest
-    if: contains(github.event.pull_request.labels.*.name, 'docker') == false && contains(github.event.pull_request.labels.*.name, 'tester') == false
+    if: github.event.action == 'closed' || (contains(github.event.pull_request.labels.*.name, 'docker') == false && contains(github.event.pull_request.labels.*.name, 'tester') == false)
     steps:
 
       - name: Get Tag Name
@@ -30,4 +30,4 @@ jobs:
           curl -i -X DELETE \
           -H "Accept: application/json" \
           -H "Authorization: JWT $HUB_TOKEN" \
-          https://hub.docker.com/v2/repositories/kometateam/kometa/tags/${{ steps.get-tag-name.outputs.tag_name }}/
+          https://hub.docker.com/v2/repositories/${{ vars.DOCKER_TEAM }}/${{ vars.DOCKER_REPO }}/tags/${{ steps.get-tag-name.outputs.tag_name }}/
