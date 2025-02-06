@@ -11,7 +11,7 @@ hide:
         "DESCRIPTION": "create collections based on other charts",
         "SECTION_NUMBER": "020"
     }'
-    replace-tags='{"space": "Recommendations: The `StevenLu's Popular Movies` and `Top 10 Pirated Movies of the Week` Collections only work with Movie Libraries."}'
+    replace-tags='{"space": "Recommendations: The `StevenLu\'s Popular Movies` and `Top 10 Pirated Movies of the Week` Collections only work with Movie Libraries."}'
 %}
 | `AniDB Popular`                     | `anidb`       | Collection of the most Popular Anime on AniDB.       |
 | `Common Sense Selection`            | `commonsense` | Collection of Common Sense Selection Movies/Shows.   |
