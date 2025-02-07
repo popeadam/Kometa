@@ -11,7 +11,14 @@ hide:
         "DESCRIPTION": "create collections based on lists from Letterboxd",
         "SECTION_NUMBER": "020"
     }'
-    replace-tags='{"space": "Recommendations: Users might consider increasing the value set for the Template Variable `cache_builders:` as several lists are in excess of 1,000 items and are not updated daily. The collections `IMDb Top 250 (Letterboxd)`, `Oscar Best Picture Winners`, and `Cannes Palme d\'Or Winners` are turned off by default as these collections already exist within other defaults. Refer to the examples below for turning the collections on within the Letterboxd defaults using Template Variables."}'
+    replace-tags='{"space": "
+Recommendations: Users might consider increasing the value set for the Template Variable 
+`cache_builders:` as several lists are in excess of 1,000 items and are not updated daily.
+
+The collections `IMDb Top 250 (Letterboxd)`, `Oscar Best Picture Winners`, and `Cannes Palme d\'Or Winners` are turned 
+off by default as these collections already exist within other defaults. Refer to the examples below for turning the 
+collections on within the Letterboxd defaults using Template Variables.
+"}'
     
 %}
 | `1,001 To See Before You Die`    | `1001_movies`       | Collection of 1,001 Movies You Must See Before You Die.                       |
