@@ -45,12 +45,13 @@ hide:
         include-markdown "./../templates/variable_list.md"
         only-include="exclude|include|limit|sort_by|style|format|tmdb_birthday|tmdb_person_offset"
         replace='{
-            "NAME": "Actors", 
-            "VALUE": "Actor Names",
+            "DYNAMIC_NAME": "Actors", 
+            "DYNAMIC_VALUE": "Actor Names",
             "NAME_FORMAT": "<<key_name>>",
             "SUMMARY_FORMAT": "<<library_translationU>>s with <<key_name>>."
         }'
+        rewrite-relative-urls=false
     %}
 
-    {% include-markdown "./../templates/variable_list.md" only-include="sup1" %}
+    {% include-markdown "./../templates/variable_list.md" only-include="sup1" rewrite-relative-urls=false %}
 {% include-markdown "./../templates/defaults_variables.md" %}

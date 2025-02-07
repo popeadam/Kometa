@@ -5,7 +5,7 @@ hide:
 {%
     include-markdown "./../templates/award_header.md"
     replace='{
-        "FULL_NAME": "People\\'s Choice",
+        "FULL_NAME": "People\'s Choice",
         "CODE_NAME": "pca",
         "LIBRARY_TYPE": "Movie, Show"
     }'
@@ -14,9 +14,9 @@ hide:
 {%
     include-markdown "./../templates/award_mid_both.md"
     replace='{
-        "FULL_NAME": "People\\'s Choice",
+        "FULL_NAME": "People\'s Choice",
         "CODE_NAME": "pca",
-        "SHORT_NAME": "People\\'s Choice"
+        "SHORT_NAME": "People\'s Choice"
     }'
     rewrite-relative-urls=false
 %}

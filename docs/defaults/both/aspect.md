@@ -41,12 +41,13 @@ hide:
         include-markdown "./../templates/variable_list.md"
         only-include="exclude|limit|sort_by|sync_mode|format"
         replace='{
-            "NAME": "Media Outlets", 
-            "VALUE": "Media Outlet Keys",
-            "NAME_FORMAT": "<<key>> - <<key_name>>",
-            "SUMMARY_FORMAT": "A collection of <<library_translationU>>s with the aspect ratio of <<key>>."
+            "DYNAMIC_NAME": "Media Outlets", 
+            "DYNAMIC_VALUE": "Media Outlet Keys",
+            "NAME_FORMAT": "<<key_name>>",
+            "SUMMARY_FORMAT": "A collection of <<library_translationU>>s with the aspect ratio of <<key_name>>."
         }'
+        rewrite-relative-urls=false
     %}
 
-    {% include-markdown "./../templates/variable_list.md" only-include="sup1" %}
+    {% include-markdown "./../templates/variable_list.md" only-include="sup1" rewrite-relative-urls=false %}
 {% include-markdown "./../templates/defaults_variables.md" %}

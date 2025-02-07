@@ -16,7 +16,7 @@ hide:
     replace='{
         "FULL_NAME": "British Academy of Film and Television Arts",
         "CODE_NAME": "bafta",
-        "SHORT_NAME": "BAFTA"
+        "SHORT_NAME": "BAFTA", "testtest": "test"
     }'
     rewrite-relative-urls=false
 %}
